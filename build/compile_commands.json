@@ -1,0 +1,56 @@
+[
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/base/async_logging.cc.o -c /home/spanoc/netlib/src/base/async_logging.cc",
+  "file": "/home/spanoc/netlib/src/base/async_logging.cc",
+  "output": "CMakeFiles/test.dir/src/base/async_logging.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/base/current_thread.cc.o -c /home/spanoc/netlib/src/base/current_thread.cc",
+  "file": "/home/spanoc/netlib/src/base/current_thread.cc",
+  "output": "CMakeFiles/test.dir/src/base/current_thread.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/base/file_util.cc.o -c /home/spanoc/netlib/src/base/file_util.cc",
+  "file": "/home/spanoc/netlib/src/base/file_util.cc",
+  "output": "CMakeFiles/test.dir/src/base/file_util.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/base/logfile.cc.o -c /home/spanoc/netlib/src/base/logfile.cc",
+  "file": "/home/spanoc/netlib/src/base/logfile.cc",
+  "output": "CMakeFiles/test.dir/src/base/logfile.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/base/logger.cc.o -c /home/spanoc/netlib/src/base/logger.cc",
+  "file": "/home/spanoc/netlib/src/base/logger.cc",
+  "output": "CMakeFiles/test.dir/src/base/logger.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/base/logstream.cc.o -c /home/spanoc/netlib/src/base/logstream.cc",
+  "file": "/home/spanoc/netlib/src/base/logstream.cc",
+  "output": "CMakeFiles/test.dir/src/base/logstream.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/base/thread.cc.o -c /home/spanoc/netlib/src/base/thread.cc",
+  "file": "/home/spanoc/netlib/src/base/thread.cc",
+  "output": "CMakeFiles/test.dir/src/base/thread.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/base/timestamp.cc.o -c /home/spanoc/netlib/src/base/timestamp.cc",
+  "file": "/home/spanoc/netlib/src/base/timestamp.cc",
+  "output": "CMakeFiles/test.dir/src/base/timestamp.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/test/test_log.cc.o -c /home/spanoc/netlib/test/test_log.cc",
+  "file": "/home/spanoc/netlib/test/test_log.cc",
+  "output": "CMakeFiles/test.dir/test/test_log.cc.o"
+}
+]

@@ -1,0 +1,27 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/spanoc/netlib/src/base/async_logging.cc" "CMakeFiles/test.dir/src/base/async_logging.cc.o" "gcc" "CMakeFiles/test.dir/src/base/async_logging.cc.o.d"
+  "/home/spanoc/netlib/src/base/current_thread.cc" "CMakeFiles/test.dir/src/base/current_thread.cc.o" "gcc" "CMakeFiles/test.dir/src/base/current_thread.cc.o.d"
+  "/home/spanoc/netlib/src/base/file_util.cc" "CMakeFiles/test.dir/src/base/file_util.cc.o" "gcc" "CMakeFiles/test.dir/src/base/file_util.cc.o.d"
+  "/home/spanoc/netlib/src/base/logfile.cc" "CMakeFiles/test.dir/src/base/logfile.cc.o" "gcc" "CMakeFiles/test.dir/src/base/logfile.cc.o.d"
+  "/home/spanoc/netlib/src/base/logger.cc" "CMakeFiles/test.dir/src/base/logger.cc.o" "gcc" "CMakeFiles/test.dir/src/base/logger.cc.o.d"
+  "/home/spanoc/netlib/src/base/logstream.cc" "CMakeFiles/test.dir/src/base/logstream.cc.o" "gcc" "CMakeFiles/test.dir/src/base/logstream.cc.o.d"
+  "/home/spanoc/netlib/src/base/thread.cc" "CMakeFiles/test.dir/src/base/thread.cc.o" "gcc" "CMakeFiles/test.dir/src/base/thread.cc.o.d"
+  "/home/spanoc/netlib/src/base/timestamp.cc" "CMakeFiles/test.dir/src/base/timestamp.cc.o" "gcc" "CMakeFiles/test.dir/src/base/timestamp.cc.o.d"
+  "/home/spanoc/netlib/test/test_log.cc" "CMakeFiles/test.dir/test/test_log.cc.o" "gcc" "CMakeFiles/test.dir/test/test_log.cc.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

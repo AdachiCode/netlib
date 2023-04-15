@@ -14,7 +14,7 @@ LogStream& LogStream::operator<<(unsigned short v) {
 LogStream& LogStream::operator<<(int v) {
   if (buffer_.remaining_size() >= kMaxNumericSize) {
     int len = snprintf(buffer_.cur(), kMaxNumericSize, "%d", v);
-    buffer_.add(len);
+    buffer_.Add(len);
   }
   return *this;
 }
@@ -22,7 +22,7 @@ LogStream& LogStream::operator<<(int v) {
 LogStream& LogStream::operator<<(unsigned int v) {
   if (buffer_.remaining_size() >= kMaxNumericSize) {
     int len = snprintf(buffer_.cur(), kMaxNumericSize, "%u", v);
-    buffer_.add(len);
+    buffer_.Add(len);
   }
   return *this;
 }
@@ -30,7 +30,7 @@ LogStream& LogStream::operator<<(unsigned int v) {
 LogStream& LogStream::operator<<(long v) {
   if (buffer_.remaining_size() >= kMaxNumericSize) {
     int len = snprintf(buffer_.cur(), kMaxNumericSize, "%ld", v);
-    buffer_.add(len);
+    buffer_.Add(len);
   }
   return *this;
 }
@@ -38,7 +38,7 @@ LogStream& LogStream::operator<<(long v) {
 LogStream& LogStream::operator<<(unsigned long v) {
   if (buffer_.remaining_size() >= kMaxNumericSize) {
     int len = snprintf(buffer_.cur(), kMaxNumericSize, "%lu", v);
-    buffer_.add(len);
+    buffer_.Add(len);
   }
   return *this;
 }
@@ -46,7 +46,7 @@ LogStream& LogStream::operator<<(unsigned long v) {
 LogStream& LogStream::operator<<(long long v) {
   if (buffer_.remaining_size() >= kMaxNumericSize) {
     int len = snprintf(buffer_.cur(), kMaxNumericSize, "%lld", v);
-    buffer_.add(len);
+    buffer_.Add(len);
   }
   return *this;
 }
@@ -54,7 +54,7 @@ LogStream& LogStream::operator<<(long long v) {
 LogStream& LogStream::operator<<(unsigned long long v) {
   if (buffer_.remaining_size() >= kMaxNumericSize) {
     int len = snprintf(buffer_.cur(), kMaxNumericSize, "%llu", v);
-    buffer_.add(len);
+    buffer_.Add(len);
   }
   return *this;
 }
@@ -67,18 +67,15 @@ LogStream& LogStream::operator<<(float v) {
 LogStream& LogStream::operator<<(double v) {
   if (buffer_.remaining_size() >= kMaxNumericSize) {
     int len = snprintf(buffer_.cur(), kMaxNumericSize, "%.12g", v); // %g可以把浮点数的末尾多余0去掉
-    buffer_.add(len);
+    buffer_.Add(len);
   }
   return *this;
 }
 
 LogStream& LogStream::operator<<(const void* p) {
   if (buffer_.remaining_size() >= kMaxNumericSize) {
-    char *buf = buffer_.cur();
-    buf[0] = '0';
-    buf[1] = 'x';
-    int len = snprintf(buf + 2, kMaxNumericSize, "%p", p); 
-    buffer_.add(len + 2);
+    int len = snprintf(buffer_.cur(), kMaxNumericSize, "%p", p); 
+    buffer_.Add(len);
   }
   return *this;
 }

@@ -8,7 +8,7 @@
 class LogStream : private NonCopyable {
  public:
   LogStream& operator<<(bool v) {
-    buffer_.append(v ? "1" : "0", 1);
+    buffer_.Append(v ? "1" : "0", 1);
     return *this;
   }
   LogStream& operator<<(short);
@@ -22,16 +22,16 @@ class LogStream : private NonCopyable {
   LogStream& operator<<(float);
   LogStream& operator<<(double);
   LogStream& operator<<(char v) {
-    buffer_.append(&v, 1);
+    buffer_.Append(&v, 1);
     return *this;
   } 
   LogStream& operator<<(const void*); // 打印十六位数地址
 
   LogStream& operator<<(const char *str) {
     if (str) {
-      buffer_.append(str, strlen(str));
+      buffer_.Append(str, strlen(str));
     } else {
-      buffer_.append("(null)", 6);
+      buffer_.Append("(null)", 6);
     }
     return *this;
   }
@@ -40,9 +40,11 @@ class LogStream : private NonCopyable {
     return *this;
   }
   LogStream& operator<<(const std::string& s) {
-    buffer_.append(s.c_str(), s.size());
+    buffer_.Append(s.c_str(), s.size());
     return *this;
   } 
+
+  const SmallLogBuffer& buffer() const { return buffer_; }
  private:
   static constexpr int kMaxNumericSize = 48; // 数字转换成字符串的最大长度
   SmallLogBuffer buffer_;

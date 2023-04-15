@@ -10,6 +10,7 @@ class Logger : private NonCopyable {
   explicit Logger(const char *filename, int line, LogLevel level);
   ~Logger();
   static LogLevel loglevel();
+  LogStream& stream() { return stream_; }
  private:
   Timestamp timestamp_;
   LogStream stream_;

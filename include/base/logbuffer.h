@@ -1,6 +1,7 @@
 #ifndef NETLIB_BASE_LOGBUFFER
 #define NETLIB_BASE_LOGBUFFER
 
+#include <string.h>
 #include "base/noncopyable.h"
 
 constexpr int kSmallBufferSize = 4000;
@@ -12,18 +13,20 @@ class FixedBuffer : private NonCopyable {
   explicit FixedBuffer() : cur_(data_) {}
   ~FixedBuffer() {}
 
-  void append(const char* buf, size_t len) {
-    if (remaining_size() > len) { // 在data数组的最后剩下一个字节
-      memcpy(cur, buf, len);
-      cur += len;
+  void Append(const char* buf, size_t len) {
+    if (static_cast<size_t>(remaining_size()) > len) { // 在data数组的最后剩下一个字节
+      memcpy(cur_, buf, len);
+      cur_ += len;
     }
   }
 
   int size() const { return cur_ - data_; }
   int remaining_size() const { return sizeof(data_) - size(); }
+  const char *data() const { return data_; }
   // 这两个接口是为了直接供logstream中的snprintf写data数组而不经过append，提高效率
   char *cur() const { return cur_; }
-  void add(size_t len) { cur += len; }
+  void Add(size_t len) { cur_ += len; }
+  void Reset() { cur_ = data_; } // 以便于重用buffer
  private:
   char data_[SIZE];
   char *cur_;
