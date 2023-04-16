@@ -18,6 +18,7 @@ void AppendFile::Append(const char *log, size_t len) {
   while (written != len) {
     size_t remain = len - written;
     size_t n = fwrite_unlocked(log, 1, remain, fp_); // 使用无锁版本， 增大读写效率
+    // fwrite(log, 1, remain, stdout); 
     if (n != remain) {
       int err = ferror(fp_);
       if (err) {

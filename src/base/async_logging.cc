@@ -79,6 +79,8 @@ void AsyncLogging::ThreadFunc() {
     }
     buffers_to_write.clear();
   }  
+
+  fprintf(stdout, "async_log thread exit\n");
 }
 
 // C++11保证线程安全性

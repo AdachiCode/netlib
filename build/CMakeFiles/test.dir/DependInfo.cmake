@@ -16,7 +16,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/spanoc/netlib/src/base/logstream.cc" "CMakeFiles/test.dir/src/base/logstream.cc.o" "gcc" "CMakeFiles/test.dir/src/base/logstream.cc.o.d"
   "/home/spanoc/netlib/src/base/thread.cc" "CMakeFiles/test.dir/src/base/thread.cc.o" "gcc" "CMakeFiles/test.dir/src/base/thread.cc.o.d"
   "/home/spanoc/netlib/src/base/timestamp.cc" "CMakeFiles/test.dir/src/base/timestamp.cc.o" "gcc" "CMakeFiles/test.dir/src/base/timestamp.cc.o.d"
-  "/home/spanoc/netlib/test/test_log.cc" "CMakeFiles/test.dir/test/test_log.cc.o" "gcc" "CMakeFiles/test.dir/test/test_log.cc.o.d"
+  "/home/spanoc/netlib/src/net/channel.cc" "CMakeFiles/test.dir/src/net/channel.cc.o" "gcc" "CMakeFiles/test.dir/src/net/channel.cc.o.d"
+  "/home/spanoc/netlib/src/net/epoller.cc" "CMakeFiles/test.dir/src/net/epoller.cc.o" "gcc" "CMakeFiles/test.dir/src/net/epoller.cc.o.d"
+  "/home/spanoc/netlib/src/net/event_loop.cc" "CMakeFiles/test.dir/src/net/event_loop.cc.o" "gcc" "CMakeFiles/test.dir/src/net/event_loop.cc.o.d"
+  "/home/spanoc/netlib/test/test_reactor.cc" "CMakeFiles/test.dir/test/test_reactor.cc.o" "gcc" "CMakeFiles/test.dir/test/test_reactor.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

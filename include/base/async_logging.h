@@ -22,7 +22,7 @@ class  AsyncLogging : private NonCopyable {
   }
   void Stop() {
     running_ = false;
-    cond_.Signal(); // 立即唤醒线程, 并使其停止循环，使线程主函数退出
+    cond_.Signal(); // 立即唤醒线程, 将当前缓冲区日志输出并使其停止循环，使线程主函数退出  但不能保证所有日志都输出了，因为可能当前正在输出日志， 下一轮循环直接结束了
     thread_.Join();
   }
  private:

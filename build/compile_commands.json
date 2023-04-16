@@ -49,8 +49,26 @@
 },
 {
   "directory": "/home/spanoc/netlib/build",
-  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/test/test_log.cc.o -c /home/spanoc/netlib/test/test_log.cc",
-  "file": "/home/spanoc/netlib/test/test_log.cc",
-  "output": "CMakeFiles/test.dir/test/test_log.cc.o"
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/channel.cc.o -c /home/spanoc/netlib/src/net/channel.cc",
+  "file": "/home/spanoc/netlib/src/net/channel.cc",
+  "output": "CMakeFiles/test.dir/src/net/channel.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/epoller.cc.o -c /home/spanoc/netlib/src/net/epoller.cc",
+  "file": "/home/spanoc/netlib/src/net/epoller.cc",
+  "output": "CMakeFiles/test.dir/src/net/epoller.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/event_loop.cc.o -c /home/spanoc/netlib/src/net/event_loop.cc",
+  "file": "/home/spanoc/netlib/src/net/event_loop.cc",
+  "output": "CMakeFiles/test.dir/src/net/event_loop.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/test/test_reactor.cc.o -c /home/spanoc/netlib/test/test_reactor.cc",
+  "file": "/home/spanoc/netlib/test/test_reactor.cc",
+  "output": "CMakeFiles/test.dir/test/test_reactor.cc.o"
 }
 ]

@@ -321,29 +321,101 @@ src/base/timestamp.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/timestamp.cc.s
 .PHONY : src/base/timestamp.cc.s
 
-test/test_log.o: test/test_log.cc.o
-.PHONY : test/test_log.o
+src/net/channel.o: src/net/channel.cc.o
+.PHONY : src/net/channel.o
 
 # target to build an object file
-test/test_log.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_log.cc.o
-.PHONY : test/test_log.cc.o
+src/net/channel.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/channel.cc.o
+.PHONY : src/net/channel.cc.o
 
-test/test_log.i: test/test_log.cc.i
-.PHONY : test/test_log.i
+src/net/channel.i: src/net/channel.cc.i
+.PHONY : src/net/channel.i
 
 # target to preprocess a source file
-test/test_log.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_log.cc.i
-.PHONY : test/test_log.cc.i
+src/net/channel.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/channel.cc.i
+.PHONY : src/net/channel.cc.i
 
-test/test_log.s: test/test_log.cc.s
-.PHONY : test/test_log.s
+src/net/channel.s: src/net/channel.cc.s
+.PHONY : src/net/channel.s
 
 # target to generate assembly for a file
-test/test_log.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_log.cc.s
-.PHONY : test/test_log.cc.s
+src/net/channel.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/channel.cc.s
+.PHONY : src/net/channel.cc.s
+
+src/net/epoller.o: src/net/epoller.cc.o
+.PHONY : src/net/epoller.o
+
+# target to build an object file
+src/net/epoller.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/epoller.cc.o
+.PHONY : src/net/epoller.cc.o
+
+src/net/epoller.i: src/net/epoller.cc.i
+.PHONY : src/net/epoller.i
+
+# target to preprocess a source file
+src/net/epoller.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/epoller.cc.i
+.PHONY : src/net/epoller.cc.i
+
+src/net/epoller.s: src/net/epoller.cc.s
+.PHONY : src/net/epoller.s
+
+# target to generate assembly for a file
+src/net/epoller.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/epoller.cc.s
+.PHONY : src/net/epoller.cc.s
+
+src/net/event_loop.o: src/net/event_loop.cc.o
+.PHONY : src/net/event_loop.o
+
+# target to build an object file
+src/net/event_loop.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop.cc.o
+.PHONY : src/net/event_loop.cc.o
+
+src/net/event_loop.i: src/net/event_loop.cc.i
+.PHONY : src/net/event_loop.i
+
+# target to preprocess a source file
+src/net/event_loop.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop.cc.i
+.PHONY : src/net/event_loop.cc.i
+
+src/net/event_loop.s: src/net/event_loop.cc.s
+.PHONY : src/net/event_loop.s
+
+# target to generate assembly for a file
+src/net/event_loop.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop.cc.s
+.PHONY : src/net/event_loop.cc.s
+
+test/test_reactor.o: test/test_reactor.cc.o
+.PHONY : test/test_reactor.o
+
+# target to build an object file
+test/test_reactor.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_reactor.cc.o
+.PHONY : test/test_reactor.cc.o
+
+test/test_reactor.i: test/test_reactor.cc.i
+.PHONY : test/test_reactor.i
+
+# target to preprocess a source file
+test/test_reactor.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_reactor.cc.i
+.PHONY : test/test_reactor.cc.i
+
+test/test_reactor.s: test/test_reactor.cc.s
+.PHONY : test/test_reactor.s
+
+# target to generate assembly for a file
+test/test_reactor.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_reactor.cc.s
+.PHONY : test/test_reactor.cc.s
 
 # Help Target
 help:
@@ -378,9 +450,18 @@ help:
 	@echo "... src/base/timestamp.o"
 	@echo "... src/base/timestamp.i"
 	@echo "... src/base/timestamp.s"
-	@echo "... test/test_log.o"
-	@echo "... test/test_log.i"
-	@echo "... test/test_log.s"
+	@echo "... src/net/channel.o"
+	@echo "... src/net/channel.i"
+	@echo "... src/net/channel.s"
+	@echo "... src/net/epoller.o"
+	@echo "... src/net/epoller.i"
+	@echo "... src/net/epoller.s"
+	@echo "... src/net/event_loop.o"
+	@echo "... src/net/event_loop.i"
+	@echo "... src/net/event_loop.s"
+	@echo "... test/test_reactor.o"
+	@echo "... test/test_reactor.i"
+	@echo "... test/test_reactor.s"
 .PHONY : help
 
 

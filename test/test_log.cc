@@ -45,5 +45,8 @@ int main() {
   for (int i = 0; i < 8; ++i) {
     threads[i]->Join();
   }
-  printf("end\n");
+
+  sleep(5);  // 等5秒是为了让所有日志都打出来在结束
+
+  printf("test_log end\n");
 }

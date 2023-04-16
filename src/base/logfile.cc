@@ -26,7 +26,8 @@ void LogFile::Flush() {
 }
 
 void LogFile::RollFile() {
-  std::string file_name(file_name_);
+  std::string file_name = "../logging/";
+  file_name += file_name_;
   char buf[64] = {0};
   struct timeval tv;
   gettimeofday(&tv, nullptr);
