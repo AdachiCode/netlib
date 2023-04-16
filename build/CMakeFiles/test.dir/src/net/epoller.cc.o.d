@@ -167,4 +167,11 @@ CMakeFiles/test.dir/src/net/epoller.cc.o: \
   /home/spanoc/netlib/include/base/current_thread.h \
   /usr/include/sys/syscall.h /usr/include/asm/unistd.h \
   /usr/include/asm/unistd_64.h /usr/include/bits/syscall.h \
+  /home/spanoc/netlib/include/net/timer_container.h \
+  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/deque \
+  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/stl_deque.h \
+  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/deque.tcc \
+  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/queue \
+  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/stl_heap.h \
+  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/stl_queue.h \
   /home/spanoc/netlib/include/net/channel.h

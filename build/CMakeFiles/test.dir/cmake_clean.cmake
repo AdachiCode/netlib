@@ -21,8 +21,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/src/net/epoller.cc.o.d"
   "CMakeFiles/test.dir/src/net/event_loop.cc.o"
   "CMakeFiles/test.dir/src/net/event_loop.cc.o.d"
-  "CMakeFiles/test.dir/test/test_reactor.cc.o"
-  "CMakeFiles/test.dir/test/test_reactor.cc.o.d"
+  "CMakeFiles/test.dir/src/net/timer_container.cc.o"
+  "CMakeFiles/test.dir/src/net/timer_container.cc.o.d"
+  "CMakeFiles/test.dir/test/test_timer.cc.o"
+  "CMakeFiles/test.dir/test/test_timer.cc.o.d"
   "test"
   "test.pdb"
 )

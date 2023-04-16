@@ -8,7 +8,8 @@ EventLoop::EventLoop()
     : looping_(false),
       thread_id_(CurrentThread::gettid()),
       epoller_(new Epoller(this)),
-      active_channels_() {
+      active_channels_(),
+      timer_container_(new TimerContainer(this)) {
   LOG_TRACE << "EventLoop created " << this << " in thread " << thread_id_;
 }
 
@@ -26,6 +27,7 @@ void EventLoop::Loop() {
     for (auto it: active_channels_) {
       it->HandleEvent();
     }
+    timer_container_->HandleTimedEvent();
   }
   assert(!looping_);
   LOG_TRACE << "EventLoop " << this << " stop looping";

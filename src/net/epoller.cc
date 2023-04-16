@@ -5,6 +5,7 @@
 #include "net/epoller.h"
 #include "net/event_loop.h"
 #include "net/channel.h"
+#include "net/timer_container.h"
 
 Epoller::Epoller(EventLoop *loop) 
     : loop_(loop),
@@ -22,7 +23,7 @@ Epoller::~Epoller() {
  
 void Epoller::Epoll(ChannelList *active_channels) {
   assert(IsInLoopThread());  
-  int events_num = ::epoll_wait(epollfd_, &*events_.begin(), static_cast<int>(events_.size()), 10000); // 阻塞时间10s
+  int events_num = ::epoll_wait(epollfd_, &*events_.begin(), static_cast<int>(events_.size()), kTimerTick); 
   if (events_num > 0) {
     LOG_TRACE << events_num << " events happened";    
     for (int i = 0; i < events_num; ++i) {
@@ -31,7 +32,7 @@ void Epoller::Epoll(ChannelList *active_channels) {
       active_channels->push_back(channel);
     } 
   } else if (events_num == 0) {
-    LOG_TRACE << "no event happened"; // epoll设置了超时时间，每10s返回，如果没有事件就返回0
+    // LOG_TRACE << "no event happened"; // epoll设置了超时时间，每100ms返回，如果没有事件就返回0
   } else {
     if (errno != EINTR) { // 被信号中断
       LOG_ERROR << "Epoller::Epoll()";

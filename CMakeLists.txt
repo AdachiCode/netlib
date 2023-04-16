@@ -11,4 +11,4 @@ aux_source_directory(src/base SRC_BASE)
 aux_source_directory(src/net SRC_NET)
 # aux_source_directory(test TESTS)
 
-add_executable(${PROJECT_NAME} ${SRC_BASE} ${SRC_NET} test/test_reactor.cc)
+add_executable(${PROJECT_NAME} ${SRC_BASE} ${SRC_NET} test/test_timer.cc)
