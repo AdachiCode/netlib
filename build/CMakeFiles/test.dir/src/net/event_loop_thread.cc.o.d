@@ -1,17 +1,12 @@
-CMakeFiles/test.dir/src/net/event_loop.cc.o: \
-  /home/spanoc/netlib/src/net/event_loop.cc /usr/include/assert.h \
-  /usr/include/features.h /usr/include/features-time64.h \
-  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
-  /usr/include/stdc-predef.h /usr/include/sys/cdefs.h \
-  /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
-  /usr/include/gnu/stubs-64.h /usr/include/sys/eventfd.h \
-  /usr/lib/clang/15.0.7/include/stdint.h /usr/include/stdint.h \
-  /usr/include/bits/libc-header-start.h /usr/include/bits/types.h \
-  /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
-  /usr/include/bits/wchar.h /usr/include/bits/stdint-intn.h \
-  /usr/include/bits/stdint-uintn.h /usr/include/bits/eventfd.h \
+CMakeFiles/test.dir/src/net/event_loop_thread.cc.o: \
+  /home/spanoc/netlib/src/net/event_loop_thread.cc \
   /home/spanoc/netlib/include/base/logger.h \
   /home/spanoc/netlib/include/base/logstream.h /usr/include/string.h \
+  /usr/include/bits/libc-header-start.h /usr/include/features.h \
+  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
+  /usr/include/bits/timesize.h /usr/include/stdc-predef.h \
+  /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
+  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
   /usr/lib/clang/15.0.7/include/stddef.h \
   /usr/include/bits/types/locale_t.h \
   /usr/include/bits/types/__locale_t.h /usr/include/strings.h \
@@ -26,12 +21,16 @@ CMakeFiles/test.dir/src/net/event_loop.cc.o: \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/cwchar \
   /usr/include/wchar.h /usr/include/bits/floatn.h \
   /usr/include/bits/floatn-common.h \
-  /usr/lib/clang/15.0.7/include/stdarg.h \
+  /usr/lib/clang/15.0.7/include/stdarg.h /usr/include/bits/wchar.h \
   /usr/include/bits/types/wint_t.h /usr/include/bits/types/mbstate_t.h \
   /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
   /usr/include/bits/types/FILE.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/type_traits \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/cstdint \
+  /usr/lib/clang/15.0.7/include/stdint.h /usr/include/stdint.h \
+  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+  /usr/include/bits/time64.h /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/allocator.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/new_allocator.h \
@@ -173,6 +172,4 @@ CMakeFiles/test.dir/src/net/event_loop.cc.o: \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/queue \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/stl_heap.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/stl_queue.h \
-  /home/spanoc/netlib/include/net/epoller.h \
-  /home/spanoc/netlib/include/net/channel.h /usr/include/sys/epoll.h \
-  /usr/include/bits/epoll.h
+  /home/spanoc/netlib/include/net/event_loop_thread.h

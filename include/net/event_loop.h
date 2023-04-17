@@ -18,7 +18,11 @@ class EventLoop : private NonCopyable {
   ~EventLoop();
   void Loop();
   void Quit();
-  void WakeUp();
+  void Wakeup();
+  void RunInLoop(const std::function<void ()>& cb); 
+  void QueueInLoop(const std::function<void ()>& cb); 
+  void HandleWakeup();
+  int CreateWakeupFd();
 
   TimerWeakPtr RunAt(Timestamp time, const TimerCallBack& cb) {
     return timer_container_->AddTimer(cb, time, 0.0);
@@ -38,11 +42,20 @@ class EventLoop : private NonCopyable {
   void UpdateChannel(Channel *channel);
  private:
   typedef std::vector<Channel *> ChannelList;
+  
+  void RunPendingFunctors();
+  
   std::atomic<bool> looping_;  
   const pid_t thread_id_; // thread_id_一经初始化就不可以改变，所以可以不上锁
   std::unique_ptr<Epoller> epoller_;
   ChannelList active_channels_;
   std::unique_ptr<TimerContainer> timer_container_;
+
+  bool calling_pending_functors_; // 仅在本线程循环中使用
+  int wakeup_fd_;
+  std::unique_ptr<Channel> wakeup_channel_;
+  Mutex mutex_;
+  std::vector<std::function<void()>> pending_functors_; // GUARDED_BY(mutex_); 
 };
 
 #endif

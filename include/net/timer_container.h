@@ -42,7 +42,9 @@ class TimerContainer : private NonCopyable {
  public:
   TimerContainer(EventLoop *loop);
   TimerWeakPtr AddTimer(const TimerCallBack& cb, Timestamp time_stamp, double interval); // 返回Timer指针用于删除
+  void AddTimerInLoop(std::shared_ptr<Timer>);
   void RemoveTimer(TimerWeakPtr);
+  void RemoveTimerInLoop(TimerWeakPtr);
   void HandleTimedEvent();
  private:
   typedef std::pair<Timestamp, std::shared_ptr<Timer>> TimerEntry; // 可以按照shared_ptr内置指针的大小排序

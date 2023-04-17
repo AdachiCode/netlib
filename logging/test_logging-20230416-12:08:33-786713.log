@@ -1,4 +1,0 @@
-20230416 12:08:33.786127 5100 TRACE EventLoop created 0x7fff9f732e30 in thread 5100 - /home/spanoc/netlib/src/net/event_loop.cc : 12
-20230416 12:08:38.786949 5100 TRACE UpdateChannel fd = 5 - /home/spanoc/netlib/src/net/epoller.cc : 44
-20230416 12:08:43.787062 5100 TRACE 1 events happened - /home/spanoc/netlib/src/net/epoller.cc : 27
-20230416 12:08:43.787174 5100 TRACE EventLoop 0x7fff9f732e30stop looping - /home/spanoc/netlib/src/net/event_loop.cc : 31

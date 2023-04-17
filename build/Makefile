@@ -393,6 +393,30 @@ src/net/event_loop.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop.cc.s
 .PHONY : src/net/event_loop.cc.s
 
+src/net/event_loop_thread.o: src/net/event_loop_thread.cc.o
+.PHONY : src/net/event_loop_thread.o
+
+# target to build an object file
+src/net/event_loop_thread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_thread.cc.o
+.PHONY : src/net/event_loop_thread.cc.o
+
+src/net/event_loop_thread.i: src/net/event_loop_thread.cc.i
+.PHONY : src/net/event_loop_thread.i
+
+# target to preprocess a source file
+src/net/event_loop_thread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_thread.cc.i
+.PHONY : src/net/event_loop_thread.cc.i
+
+src/net/event_loop_thread.s: src/net/event_loop_thread.cc.s
+.PHONY : src/net/event_loop_thread.s
+
+# target to generate assembly for a file
+src/net/event_loop_thread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_thread.cc.s
+.PHONY : src/net/event_loop_thread.cc.s
+
 src/net/timer_container.o: src/net/timer_container.cc.o
 .PHONY : src/net/timer_container.o
 
@@ -417,29 +441,29 @@ src/net/timer_container.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/timer_container.cc.s
 .PHONY : src/net/timer_container.cc.s
 
-test/test_timer.o: test/test_timer.cc.o
-.PHONY : test/test_timer.o
+test/test_eventloopthread.o: test/test_eventloopthread.cc.o
+.PHONY : test/test_eventloopthread.o
 
 # target to build an object file
-test/test_timer.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_timer.cc.o
-.PHONY : test/test_timer.cc.o
+test/test_eventloopthread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_eventloopthread.cc.o
+.PHONY : test/test_eventloopthread.cc.o
 
-test/test_timer.i: test/test_timer.cc.i
-.PHONY : test/test_timer.i
+test/test_eventloopthread.i: test/test_eventloopthread.cc.i
+.PHONY : test/test_eventloopthread.i
 
 # target to preprocess a source file
-test/test_timer.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_timer.cc.i
-.PHONY : test/test_timer.cc.i
+test/test_eventloopthread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_eventloopthread.cc.i
+.PHONY : test/test_eventloopthread.cc.i
 
-test/test_timer.s: test/test_timer.cc.s
-.PHONY : test/test_timer.s
+test/test_eventloopthread.s: test/test_eventloopthread.cc.s
+.PHONY : test/test_eventloopthread.s
 
 # target to generate assembly for a file
-test/test_timer.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_timer.cc.s
-.PHONY : test/test_timer.cc.s
+test/test_eventloopthread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_eventloopthread.cc.s
+.PHONY : test/test_eventloopthread.cc.s
 
 # Help Target
 help:
@@ -483,12 +507,15 @@ help:
 	@echo "... src/net/event_loop.o"
 	@echo "... src/net/event_loop.i"
 	@echo "... src/net/event_loop.s"
+	@echo "... src/net/event_loop_thread.o"
+	@echo "... src/net/event_loop_thread.i"
+	@echo "... src/net/event_loop_thread.s"
 	@echo "... src/net/timer_container.o"
 	@echo "... src/net/timer_container.i"
 	@echo "... src/net/timer_container.s"
-	@echo "... test/test_timer.o"
-	@echo "... test/test_timer.i"
-	@echo "... test/test_timer.s"
+	@echo "... test/test_eventloopthread.o"
+	@echo "... test/test_eventloopthread.i"
+	@echo "... test/test_eventloopthread.s"
 .PHONY : help
 
 

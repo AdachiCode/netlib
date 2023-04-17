@@ -1,0 +1,13 @@
+20230417 15:02:17.340667 60804 TRACE EventLoop created 0x7f3b361fd378 in thread 60804 - /home/spanoc/netlib/src/net/event_loop.cc : 17
+20230417 15:02:17.341042 60804 TRACE UpdateChannel fd = 5 - /home/spanoc/netlib/src/net/epoller.cc : 45
+20230417 15:02:17.341160 60789 TRACE EventLoop::Wakeup() - /home/spanoc/netlib/src/net/event_loop.cc : 61
+20230417 15:02:17.341171 60804 TRACE 1 events happened - /home/spanoc/netlib/src/net/epoller.cc : 28
+20230417 15:02:17.341212 60804 TRACE EventLoop::HandleWakeup() count: 1 - /home/spanoc/netlib/src/net/event_loop.cc : 70
+20230417 15:02:18.341384 60789 TRACE EventLoop::Wakeup() - /home/spanoc/netlib/src/net/event_loop.cc : 61
+20230417 15:02:18.341404 60804 TRACE 1 events happened - /home/spanoc/netlib/src/net/epoller.cc : 28
+20230417 15:02:18.341446 60804 TRACE EventLoop::HandleWakeup() count: 1 - /home/spanoc/netlib/src/net/event_loop.cc : 70
+20230417 15:02:21.341524 60789 TRACE EventLoop::Wakeup() - /home/spanoc/netlib/src/net/event_loop.cc : 61
+20230417 15:02:21.341536 60804 TRACE 1 events happened - /home/spanoc/netlib/src/net/epoller.cc : 28
+20230417 15:02:21.341592 60804 TRACE EventLoop::HandleWakeup() count: 1 - /home/spanoc/netlib/src/net/event_loop.cc : 70
+20230417 15:02:21.341608 60804 TRACE EventLoop 0x7f3b361fd378 stop looping - /home/spanoc/netlib/src/net/event_loop.cc : 40
+20230417 15:02:24.341717 60789 TRACE EventLoopThread destroyed thread_id : 60804 - /home/spanoc/netlib/src/net/event_loop_thread.cc : 26

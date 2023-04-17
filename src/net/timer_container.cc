@@ -20,11 +20,22 @@ TimerContainer::TimerContainer(EventLoop *loop)
 
 TimerWeakPtr TimerContainer::AddTimer(const TimerCallBack& cb, Timestamp time_stamp, double interval) {
   std::shared_ptr<Timer> timer(new Timer(cb, time_stamp, interval));
-  timers_.push(TimerEntry(timer->expiration(), timer));
+  // timers_.push(TimerEntry(timer->expiration(), timer));
+  loop_->RunInLoop(std::bind(&TimerContainer::AddTimerInLoop, this, timer));
   return timer;
 }
 
- void TimerContainer::RemoveTimer(TimerWeakPtr timer) {
+void TimerContainer::AddTimerInLoop(std::shared_ptr<Timer> timer) {
+  assert(loop_->IsInLoopThread());  
+  timers_.push(TimerEntry(timer->expiration(), timer));
+}
+
+void TimerContainer::RemoveTimer(TimerWeakPtr timer) {
+  loop_->RunInLoop(std::bind(&TimerContainer::RemoveTimerInLoop, this, timer));
+}
+
+void TimerContainer::RemoveTimerInLoop(TimerWeakPtr timer) {
+  assert(loop_->IsInLoopThread());
   std::shared_ptr<Timer> shared_timer(timer.lock());
   if (shared_timer) {
     shared_timer->set_removed(true);

@@ -32,7 +32,7 @@ void Epoller::Epoll(ChannelList *active_channels) {
       active_channels->push_back(channel);
     } 
   } else if (events_num == 0) {
-    // LOG_TRACE << "no event happened"; // epoll设置了超时时间，每100ms返回，如果没有事件就返回0
+    // tLOG_TRACE << "no event happened"; // epoll设置了超时时间，每100ms返回，如果没有事件就返回0
   } else {
     if (errno != EINTR) { // 被信号中断
       LOG_ERROR << "Epoller::Epoll()";

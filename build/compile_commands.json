@@ -67,14 +67,20 @@
 },
 {
   "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/event_loop_thread.cc.o -c /home/spanoc/netlib/src/net/event_loop_thread.cc",
+  "file": "/home/spanoc/netlib/src/net/event_loop_thread.cc",
+  "output": "CMakeFiles/test.dir/src/net/event_loop_thread.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
   "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/timer_container.cc.o -c /home/spanoc/netlib/src/net/timer_container.cc",
   "file": "/home/spanoc/netlib/src/net/timer_container.cc",
   "output": "CMakeFiles/test.dir/src/net/timer_container.cc.o"
 },
 {
   "directory": "/home/spanoc/netlib/build",
-  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/test/test_timer.cc.o -c /home/spanoc/netlib/test/test_timer.cc",
-  "file": "/home/spanoc/netlib/test/test_timer.cc",
-  "output": "CMakeFiles/test.dir/test/test_timer.cc.o"
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/test/test_eventloopthread.cc.o -c /home/spanoc/netlib/test/test_eventloopthread.cc",
+  "file": "/home/spanoc/netlib/test/test_eventloopthread.cc",
+  "output": "CMakeFiles/test.dir/test/test_eventloopthread.cc.o"
 }
 ]
