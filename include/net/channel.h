@@ -14,7 +14,7 @@ class Channel : private NonCopyable {
   static constexpr int kReadEvent = EPOLLIN | EPOLLPRI;
   static constexpr int kWriteEvent = EPOLLOUT;
   
-  Channel(EventLoop *loop, int fd);
+  explicit Channel(EventLoop *loop, int fd);
   ~Channel();
   int fd() const { return fd_; }
   int event() const { return events_; }
@@ -32,6 +32,7 @@ class Channel : private NonCopyable {
   void DisableAll() { events_ = 0; Update(); }
 
   void Update();
+  void Remove();
   void HandleEvent();
  private:
   EventLoop *loop_;

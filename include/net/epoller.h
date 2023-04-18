@@ -11,7 +11,7 @@ class Epoller : private NonCopyable {
  public:
   typedef std::vector<Channel *> ChannelList;
 
-  Epoller(EventLoop *loop);
+  explicit Epoller(EventLoop *loop);
   ~Epoller();
   void Epoll(ChannelList *active_channels);
   void UpdateChannel(Channel *); // 负责更新和添加channel

@@ -49,6 +49,12 @@
 },
 {
   "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/acceptor.cc.o -c /home/spanoc/netlib/src/net/acceptor.cc",
+  "file": "/home/spanoc/netlib/src/net/acceptor.cc",
+  "output": "CMakeFiles/test.dir/src/net/acceptor.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
   "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/channel.cc.o -c /home/spanoc/netlib/src/net/channel.cc",
   "file": "/home/spanoc/netlib/src/net/channel.cc",
   "output": "CMakeFiles/test.dir/src/net/channel.cc.o"
@@ -73,14 +79,20 @@
 },
 {
   "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/socket.cc.o -c /home/spanoc/netlib/src/net/socket.cc",
+  "file": "/home/spanoc/netlib/src/net/socket.cc",
+  "output": "CMakeFiles/test.dir/src/net/socket.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
   "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/timer_container.cc.o -c /home/spanoc/netlib/src/net/timer_container.cc",
   "file": "/home/spanoc/netlib/src/net/timer_container.cc",
   "output": "CMakeFiles/test.dir/src/net/timer_container.cc.o"
 },
 {
   "directory": "/home/spanoc/netlib/build",
-  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/test/test_eventloopthread.cc.o -c /home/spanoc/netlib/test/test_eventloopthread.cc",
-  "file": "/home/spanoc/netlib/test/test_eventloopthread.cc",
-  "output": "CMakeFiles/test.dir/test/test_eventloopthread.cc.o"
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Werror  -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/test/test_acceptor.cc.o -c /home/spanoc/netlib/test/test_acceptor.cc",
+  "file": "/home/spanoc/netlib/test/test_acceptor.cc",
+  "output": "CMakeFiles/test.dir/test/test_acceptor.cc.o"
 }
 ]

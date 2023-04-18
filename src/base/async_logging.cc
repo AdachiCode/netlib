@@ -58,7 +58,7 @@ void AsyncLogging::ThreadFunc() {
     // output buffer_to_write to file
     for (const auto& it: buffers_to_write) {
       output.Append(it->data(), static_cast<size_t>(it->size()));
-      // write(STDOUT_FILENO, it->data(), it->size());
+      write(STDOUT_FILENO, it->data(), it->size());
     }
     // re-fill new_buffer1 and new_buffer2 
     if (buffers_to_write.size() > 2) {

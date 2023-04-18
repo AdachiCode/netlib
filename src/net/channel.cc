@@ -30,3 +30,7 @@ void Channel::HandleEvent() {
 void Channel::Update() {
   loop_->UpdateChannel(this);
 }
+
+void Channel::Remove() {
+  loop_->RemoveChannel(this);
+}

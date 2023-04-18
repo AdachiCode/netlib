@@ -40,6 +40,7 @@ class EventLoop : private NonCopyable {
     return thread_id_ == CurrentThread::gettid();
   }
   void UpdateChannel(Channel *channel);
+  void RemoveChannel(Channel *channel);
  private:
   typedef std::vector<Channel *> ChannelList;
   

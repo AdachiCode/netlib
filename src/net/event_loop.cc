@@ -21,6 +21,8 @@ EventLoop::EventLoop()
 
 EventLoop::~EventLoop() {
   assert(!looping_);  
+  wakeup_channel_->Remove();
+  ::close(wakeup_fd_);
 }
 
 void EventLoop::Loop() {
@@ -50,6 +52,10 @@ void EventLoop::Quit() {
 
 void EventLoop::UpdateChannel(Channel *channel) {
   epoller_->UpdateChannel(channel);    
+}
+
+void EventLoop::RemoveChannel(Channel *channel) {
+  epoller_->RemoveChannel(channel);
 }
 
 void EventLoop::Wakeup() {

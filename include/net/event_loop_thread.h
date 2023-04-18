@@ -8,7 +8,7 @@ class EventLoop;
 
 class EventLoopThread : private NonCopyable {
  public:
-  EventLoopThread(const std::string& name);
+  explicit EventLoopThread(const std::string& name);
   ~EventLoopThread();
   EventLoop *StartLoop();
   void ThreadFunc();

@@ -17,7 +17,7 @@ constexpr int kTimerTick = 100; // 每100m唤醒一次
 
 class Timer : private NonCopyable {
  public:
-  Timer(const TimerCallBack& cb, Timestamp time_stamp, double interval);
+  explicit Timer(const TimerCallBack& cb, Timestamp time_stamp, double interval);
   void Run() {
     timer_call_back_();
   }
@@ -40,7 +40,7 @@ typedef std::weak_ptr<Timer> TimerWeakPtr;
 
 class TimerContainer : private NonCopyable {
  public:
-  TimerContainer(EventLoop *loop);
+  explicit TimerContainer(EventLoop *loop);
   TimerWeakPtr AddTimer(const TimerCallBack& cb, Timestamp time_stamp, double interval); // 返回Timer指针用于删除
   void AddTimerInLoop(std::shared_ptr<Timer>);
   void RemoveTimer(TimerWeakPtr);

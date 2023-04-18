@@ -321,6 +321,30 @@ src/base/timestamp.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/timestamp.cc.s
 .PHONY : src/base/timestamp.cc.s
 
+src/net/acceptor.o: src/net/acceptor.cc.o
+.PHONY : src/net/acceptor.o
+
+# target to build an object file
+src/net/acceptor.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/acceptor.cc.o
+.PHONY : src/net/acceptor.cc.o
+
+src/net/acceptor.i: src/net/acceptor.cc.i
+.PHONY : src/net/acceptor.i
+
+# target to preprocess a source file
+src/net/acceptor.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/acceptor.cc.i
+.PHONY : src/net/acceptor.cc.i
+
+src/net/acceptor.s: src/net/acceptor.cc.s
+.PHONY : src/net/acceptor.s
+
+# target to generate assembly for a file
+src/net/acceptor.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/acceptor.cc.s
+.PHONY : src/net/acceptor.cc.s
+
 src/net/channel.o: src/net/channel.cc.o
 .PHONY : src/net/channel.o
 
@@ -417,6 +441,30 @@ src/net/event_loop_thread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_thread.cc.s
 .PHONY : src/net/event_loop_thread.cc.s
 
+src/net/socket.o: src/net/socket.cc.o
+.PHONY : src/net/socket.o
+
+# target to build an object file
+src/net/socket.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/socket.cc.o
+.PHONY : src/net/socket.cc.o
+
+src/net/socket.i: src/net/socket.cc.i
+.PHONY : src/net/socket.i
+
+# target to preprocess a source file
+src/net/socket.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/socket.cc.i
+.PHONY : src/net/socket.cc.i
+
+src/net/socket.s: src/net/socket.cc.s
+.PHONY : src/net/socket.s
+
+# target to generate assembly for a file
+src/net/socket.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/socket.cc.s
+.PHONY : src/net/socket.cc.s
+
 src/net/timer_container.o: src/net/timer_container.cc.o
 .PHONY : src/net/timer_container.o
 
@@ -441,29 +489,29 @@ src/net/timer_container.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/timer_container.cc.s
 .PHONY : src/net/timer_container.cc.s
 
-test/test_eventloopthread.o: test/test_eventloopthread.cc.o
-.PHONY : test/test_eventloopthread.o
+test/test_acceptor.o: test/test_acceptor.cc.o
+.PHONY : test/test_acceptor.o
 
 # target to build an object file
-test/test_eventloopthread.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_eventloopthread.cc.o
-.PHONY : test/test_eventloopthread.cc.o
+test/test_acceptor.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_acceptor.cc.o
+.PHONY : test/test_acceptor.cc.o
 
-test/test_eventloopthread.i: test/test_eventloopthread.cc.i
-.PHONY : test/test_eventloopthread.i
+test/test_acceptor.i: test/test_acceptor.cc.i
+.PHONY : test/test_acceptor.i
 
 # target to preprocess a source file
-test/test_eventloopthread.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_eventloopthread.cc.i
-.PHONY : test/test_eventloopthread.cc.i
+test/test_acceptor.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_acceptor.cc.i
+.PHONY : test/test_acceptor.cc.i
 
-test/test_eventloopthread.s: test/test_eventloopthread.cc.s
-.PHONY : test/test_eventloopthread.s
+test/test_acceptor.s: test/test_acceptor.cc.s
+.PHONY : test/test_acceptor.s
 
 # target to generate assembly for a file
-test/test_eventloopthread.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_eventloopthread.cc.s
-.PHONY : test/test_eventloopthread.cc.s
+test/test_acceptor.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_acceptor.cc.s
+.PHONY : test/test_acceptor.cc.s
 
 # Help Target
 help:
@@ -498,6 +546,9 @@ help:
 	@echo "... src/base/timestamp.o"
 	@echo "... src/base/timestamp.i"
 	@echo "... src/base/timestamp.s"
+	@echo "... src/net/acceptor.o"
+	@echo "... src/net/acceptor.i"
+	@echo "... src/net/acceptor.s"
 	@echo "... src/net/channel.o"
 	@echo "... src/net/channel.i"
 	@echo "... src/net/channel.s"
@@ -510,12 +561,15 @@ help:
 	@echo "... src/net/event_loop_thread.o"
 	@echo "... src/net/event_loop_thread.i"
 	@echo "... src/net/event_loop_thread.s"
+	@echo "... src/net/socket.o"
+	@echo "... src/net/socket.i"
+	@echo "... src/net/socket.s"
 	@echo "... src/net/timer_container.o"
 	@echo "... src/net/timer_container.i"
 	@echo "... src/net/timer_container.s"
-	@echo "... test/test_eventloopthread.o"
-	@echo "... test/test_eventloopthread.i"
-	@echo "... test/test_eventloopthread.s"
+	@echo "... test/test_acceptor.o"
+	@echo "... test/test_acceptor.i"
+	@echo "... test/test_acceptor.s"
 .PHONY : help
 
 
