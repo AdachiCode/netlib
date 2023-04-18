@@ -22,8 +22,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/spanoc/netlib/src/net/event_loop.cc" "CMakeFiles/test.dir/src/net/event_loop.cc.o" "gcc" "CMakeFiles/test.dir/src/net/event_loop.cc.o.d"
   "/home/spanoc/netlib/src/net/event_loop_thread.cc" "CMakeFiles/test.dir/src/net/event_loop_thread.cc.o" "gcc" "CMakeFiles/test.dir/src/net/event_loop_thread.cc.o.d"
   "/home/spanoc/netlib/src/net/socket.cc" "CMakeFiles/test.dir/src/net/socket.cc.o" "gcc" "CMakeFiles/test.dir/src/net/socket.cc.o.d"
+  "/home/spanoc/netlib/src/net/tcp_connection.cc" "CMakeFiles/test.dir/src/net/tcp_connection.cc.o" "gcc" "CMakeFiles/test.dir/src/net/tcp_connection.cc.o.d"
+  "/home/spanoc/netlib/src/net/tcp_server.cc" "CMakeFiles/test.dir/src/net/tcp_server.cc.o" "gcc" "CMakeFiles/test.dir/src/net/tcp_server.cc.o.d"
   "/home/spanoc/netlib/src/net/timer_container.cc" "CMakeFiles/test.dir/src/net/timer_container.cc.o" "gcc" "CMakeFiles/test.dir/src/net/timer_container.cc.o.d"
-  "/home/spanoc/netlib/test/test_acceptor.cc" "CMakeFiles/test.dir/test/test_acceptor.cc.o" "gcc" "CMakeFiles/test.dir/test/test_acceptor.cc.o.d"
+  "/home/spanoc/netlib/test/test_connection.cc" "CMakeFiles/test.dir/test/test_connection.cc.o" "gcc" "CMakeFiles/test.dir/test/test_connection.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

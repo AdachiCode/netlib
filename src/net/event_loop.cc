@@ -16,7 +16,7 @@ EventLoop::EventLoop()
       wakeup_channel_(new Channel(this, wakeup_fd_)) {
   LOG_TRACE << "EventLoop created " << this << " in thread " << thread_id_;
   wakeup_channel_->set_read_call_back(std::bind(&EventLoop::HandleWakeup, this));
-  wakeup_channel_->EnableReading();
+  wakeup_channel_->EnableReading(); // 此时事件循环还没开启，不会有竞态（见TCPconnection）
 }
 
 EventLoop::~EventLoop() {

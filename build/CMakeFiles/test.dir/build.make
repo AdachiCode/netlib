@@ -265,10 +265,38 @@ CMakeFiles/test.dir/src/net/socket.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/net/socket.cc.s"
 	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spanoc/netlib/src/net/socket.cc -o CMakeFiles/test.dir/src/net/socket.cc.s
 
+CMakeFiles/test.dir/src/net/tcp_connection.cc.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/net/tcp_connection.cc.o: /home/spanoc/netlib/src/net/tcp_connection.cc
+CMakeFiles/test.dir/src/net/tcp_connection.cc.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spanoc/netlib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/test.dir/src/net/tcp_connection.cc.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/net/tcp_connection.cc.o -MF CMakeFiles/test.dir/src/net/tcp_connection.cc.o.d -o CMakeFiles/test.dir/src/net/tcp_connection.cc.o -c /home/spanoc/netlib/src/net/tcp_connection.cc
+
+CMakeFiles/test.dir/src/net/tcp_connection.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/net/tcp_connection.cc.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spanoc/netlib/src/net/tcp_connection.cc > CMakeFiles/test.dir/src/net/tcp_connection.cc.i
+
+CMakeFiles/test.dir/src/net/tcp_connection.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/net/tcp_connection.cc.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spanoc/netlib/src/net/tcp_connection.cc -o CMakeFiles/test.dir/src/net/tcp_connection.cc.s
+
+CMakeFiles/test.dir/src/net/tcp_server.cc.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/net/tcp_server.cc.o: /home/spanoc/netlib/src/net/tcp_server.cc
+CMakeFiles/test.dir/src/net/tcp_server.cc.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spanoc/netlib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/test.dir/src/net/tcp_server.cc.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/net/tcp_server.cc.o -MF CMakeFiles/test.dir/src/net/tcp_server.cc.o.d -o CMakeFiles/test.dir/src/net/tcp_server.cc.o -c /home/spanoc/netlib/src/net/tcp_server.cc
+
+CMakeFiles/test.dir/src/net/tcp_server.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/net/tcp_server.cc.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spanoc/netlib/src/net/tcp_server.cc > CMakeFiles/test.dir/src/net/tcp_server.cc.i
+
+CMakeFiles/test.dir/src/net/tcp_server.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/net/tcp_server.cc.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spanoc/netlib/src/net/tcp_server.cc -o CMakeFiles/test.dir/src/net/tcp_server.cc.s
+
 CMakeFiles/test.dir/src/net/timer_container.cc.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/net/timer_container.cc.o: /home/spanoc/netlib/src/net/timer_container.cc
 CMakeFiles/test.dir/src/net/timer_container.cc.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spanoc/netlib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/test.dir/src/net/timer_container.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spanoc/netlib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/test.dir/src/net/timer_container.cc.o"
 	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/net/timer_container.cc.o -MF CMakeFiles/test.dir/src/net/timer_container.cc.o.d -o CMakeFiles/test.dir/src/net/timer_container.cc.o -c /home/spanoc/netlib/src/net/timer_container.cc
 
 CMakeFiles/test.dir/src/net/timer_container.cc.i: cmake_force
@@ -279,19 +307,19 @@ CMakeFiles/test.dir/src/net/timer_container.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/net/timer_container.cc.s"
 	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spanoc/netlib/src/net/timer_container.cc -o CMakeFiles/test.dir/src/net/timer_container.cc.s
 
-CMakeFiles/test.dir/test/test_acceptor.cc.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/test/test_acceptor.cc.o: /home/spanoc/netlib/test/test_acceptor.cc
-CMakeFiles/test.dir/test/test_acceptor.cc.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spanoc/netlib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/test.dir/test/test_acceptor.cc.o"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test/test_acceptor.cc.o -MF CMakeFiles/test.dir/test/test_acceptor.cc.o.d -o CMakeFiles/test.dir/test/test_acceptor.cc.o -c /home/spanoc/netlib/test/test_acceptor.cc
+CMakeFiles/test.dir/test/test_connection.cc.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_connection.cc
+CMakeFiles/test.dir/test/test_connection.cc.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spanoc/netlib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/test.dir/test/test_connection.cc.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test/test_connection.cc.o -MF CMakeFiles/test.dir/test/test_connection.cc.o.d -o CMakeFiles/test.dir/test/test_connection.cc.o -c /home/spanoc/netlib/test/test_connection.cc
 
-CMakeFiles/test.dir/test/test_acceptor.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test/test_acceptor.cc.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spanoc/netlib/test/test_acceptor.cc > CMakeFiles/test.dir/test/test_acceptor.cc.i
+CMakeFiles/test.dir/test/test_connection.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test/test_connection.cc.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spanoc/netlib/test/test_connection.cc > CMakeFiles/test.dir/test/test_connection.cc.i
 
-CMakeFiles/test.dir/test/test_acceptor.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test/test_acceptor.cc.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spanoc/netlib/test/test_acceptor.cc -o CMakeFiles/test.dir/test/test_acceptor.cc.s
+CMakeFiles/test.dir/test/test_connection.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test/test_connection.cc.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spanoc/netlib/test/test_connection.cc -o CMakeFiles/test.dir/test/test_connection.cc.s
 
 # Object files for target test
 test_OBJECTS = \
@@ -309,8 +337,10 @@ test_OBJECTS = \
 "CMakeFiles/test.dir/src/net/event_loop.cc.o" \
 "CMakeFiles/test.dir/src/net/event_loop_thread.cc.o" \
 "CMakeFiles/test.dir/src/net/socket.cc.o" \
+"CMakeFiles/test.dir/src/net/tcp_connection.cc.o" \
+"CMakeFiles/test.dir/src/net/tcp_server.cc.o" \
 "CMakeFiles/test.dir/src/net/timer_container.cc.o" \
-"CMakeFiles/test.dir/test/test_acceptor.cc.o"
+"CMakeFiles/test.dir/test/test_connection.cc.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
@@ -329,11 +359,13 @@ test: CMakeFiles/test.dir/src/net/epoller.cc.o
 test: CMakeFiles/test.dir/src/net/event_loop.cc.o
 test: CMakeFiles/test.dir/src/net/event_loop_thread.cc.o
 test: CMakeFiles/test.dir/src/net/socket.cc.o
+test: CMakeFiles/test.dir/src/net/tcp_connection.cc.o
+test: CMakeFiles/test.dir/src/net/tcp_server.cc.o
 test: CMakeFiles/test.dir/src/net/timer_container.cc.o
-test: CMakeFiles/test.dir/test/test_acceptor.cc.o
+test: CMakeFiles/test.dir/test/test_connection.cc.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/spanoc/netlib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/spanoc/netlib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

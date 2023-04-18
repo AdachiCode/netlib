@@ -42,7 +42,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -Wall -Werror  -Wthread-safety -fsanitize=thread -g"
+					"fragment" : " -Wall -Wthread-safety -fsanitize=thread -g"
 				}
 			],
 			"includes" : 
@@ -70,7 +70,9 @@
 				12,
 				13,
 				14,
-				15
+				15,
+				16,
+				17
 			]
 		}
 	],
@@ -80,7 +82,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-Wall -Werror  -Wthread-safety -fsanitize=thread -g",
+				"fragment" : "-Wall -Wthread-safety -fsanitize=thread -g",
 				"role" : "flags"
 			},
 			{
@@ -118,7 +120,9 @@
 				12,
 				13,
 				14,
-				15
+				15,
+				16,
+				17
 			]
 		}
 	],
@@ -211,13 +215,25 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/net/tcp_connection.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/net/tcp_server.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/net/timer_container.cc",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "test/test_acceptor.cc",
+			"path" : "test/test_connection.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

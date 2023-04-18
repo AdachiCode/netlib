@@ -8,6 +8,7 @@ Acceptor::Acceptor(EventLoop *loop, const InetAddress& listen_addr)
       listen_socket_(Socket::CreateNonblockingSocket()),
       accept_channel_(new Channel(loop_, listen_socket_.fd())) {
   listen_socket_.Bind(listen_addr);
+  listen_socket_.SetReuseAddr(); // 重用TIME_WAIT状态的端口(方便调试时使用)
   accept_channel_->set_read_call_back(std::bind(&Acceptor::HandleAccept, this));
 }
 

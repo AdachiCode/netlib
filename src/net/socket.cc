@@ -57,3 +57,8 @@ int Socket::Accpet(InetAddress *peeraddr) {
   }
   return connfd;
 }                      
+
+void Socket::SetReuseAddr() {
+  int reuse = 1;
+  setsockopt(sockfd_, SOL_SOCKET, SO_REUSEADDR, &reuse, sizeof(reuse));
+}

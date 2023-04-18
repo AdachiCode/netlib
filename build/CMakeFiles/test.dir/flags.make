@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/spanoc/netlib/include
 
-CXX_FLAGS =  -Wall -Werror  -Wthread-safety -fsanitize=thread -g
+CXX_FLAGS =  -Wall -Wthread-safety -fsanitize=thread -g
 

@@ -465,6 +465,54 @@ src/net/socket.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/socket.cc.s
 .PHONY : src/net/socket.cc.s
 
+src/net/tcp_connection.o: src/net/tcp_connection.cc.o
+.PHONY : src/net/tcp_connection.o
+
+# target to build an object file
+src/net/tcp_connection.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_connection.cc.o
+.PHONY : src/net/tcp_connection.cc.o
+
+src/net/tcp_connection.i: src/net/tcp_connection.cc.i
+.PHONY : src/net/tcp_connection.i
+
+# target to preprocess a source file
+src/net/tcp_connection.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_connection.cc.i
+.PHONY : src/net/tcp_connection.cc.i
+
+src/net/tcp_connection.s: src/net/tcp_connection.cc.s
+.PHONY : src/net/tcp_connection.s
+
+# target to generate assembly for a file
+src/net/tcp_connection.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_connection.cc.s
+.PHONY : src/net/tcp_connection.cc.s
+
+src/net/tcp_server.o: src/net/tcp_server.cc.o
+.PHONY : src/net/tcp_server.o
+
+# target to build an object file
+src/net/tcp_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_server.cc.o
+.PHONY : src/net/tcp_server.cc.o
+
+src/net/tcp_server.i: src/net/tcp_server.cc.i
+.PHONY : src/net/tcp_server.i
+
+# target to preprocess a source file
+src/net/tcp_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_server.cc.i
+.PHONY : src/net/tcp_server.cc.i
+
+src/net/tcp_server.s: src/net/tcp_server.cc.s
+.PHONY : src/net/tcp_server.s
+
+# target to generate assembly for a file
+src/net/tcp_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_server.cc.s
+.PHONY : src/net/tcp_server.cc.s
+
 src/net/timer_container.o: src/net/timer_container.cc.o
 .PHONY : src/net/timer_container.o
 
@@ -489,29 +537,29 @@ src/net/timer_container.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/timer_container.cc.s
 .PHONY : src/net/timer_container.cc.s
 
-test/test_acceptor.o: test/test_acceptor.cc.o
-.PHONY : test/test_acceptor.o
+test/test_connection.o: test/test_connection.cc.o
+.PHONY : test/test_connection.o
 
 # target to build an object file
-test/test_acceptor.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_acceptor.cc.o
-.PHONY : test/test_acceptor.cc.o
+test/test_connection.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_connection.cc.o
+.PHONY : test/test_connection.cc.o
 
-test/test_acceptor.i: test/test_acceptor.cc.i
-.PHONY : test/test_acceptor.i
+test/test_connection.i: test/test_connection.cc.i
+.PHONY : test/test_connection.i
 
 # target to preprocess a source file
-test/test_acceptor.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_acceptor.cc.i
-.PHONY : test/test_acceptor.cc.i
+test/test_connection.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_connection.cc.i
+.PHONY : test/test_connection.cc.i
 
-test/test_acceptor.s: test/test_acceptor.cc.s
-.PHONY : test/test_acceptor.s
+test/test_connection.s: test/test_connection.cc.s
+.PHONY : test/test_connection.s
 
 # target to generate assembly for a file
-test/test_acceptor.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_acceptor.cc.s
-.PHONY : test/test_acceptor.cc.s
+test/test_connection.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_connection.cc.s
+.PHONY : test/test_connection.cc.s
 
 # Help Target
 help:
@@ -564,12 +612,18 @@ help:
 	@echo "... src/net/socket.o"
 	@echo "... src/net/socket.i"
 	@echo "... src/net/socket.s"
+	@echo "... src/net/tcp_connection.o"
+	@echo "... src/net/tcp_connection.i"
+	@echo "... src/net/tcp_connection.s"
+	@echo "... src/net/tcp_server.o"
+	@echo "... src/net/tcp_server.i"
+	@echo "... src/net/tcp_server.s"
 	@echo "... src/net/timer_container.o"
 	@echo "... src/net/timer_container.i"
 	@echo "... src/net/timer_container.s"
-	@echo "... test/test_acceptor.o"
-	@echo "... test/test_acceptor.i"
-	@echo "... test/test_acceptor.s"
+	@echo "... test/test_connection.o"
+	@echo "... test/test_connection.i"
+	@echo "... test/test_connection.s"
 .PHONY : help
 
 
