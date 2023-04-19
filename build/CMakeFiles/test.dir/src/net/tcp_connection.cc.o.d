@@ -184,5 +184,6 @@ CMakeFiles/test.dir/src/net/tcp_connection.cc.o: \
   /usr/include/asm-generic/bitsperlong.h /usr/include/asm/sockios.h \
   /usr/include/asm-generic/sockios.h \
   /usr/include/bits/types/struct_osockaddr.h /usr/include/bits/in.h \
+  /home/spanoc/netlib/include/net/buffer.h \
   /home/spanoc/netlib/include/net/channel.h /usr/include/sys/epoll.h \
-  /usr/include/bits/epoll.h /home/spanoc/netlib/include/net/buffer.h
+  /usr/include/bits/epoll.h

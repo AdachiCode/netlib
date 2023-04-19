@@ -193,4 +193,5 @@ CMakeFiles/test.dir/src/net/tcp_server.cc.o: \
   /home/spanoc/netlib/include/net/acceptor.h \
   /home/spanoc/netlib/include/net/channel.h /usr/include/sys/epoll.h \
   /usr/include/bits/epoll.h \
-  /home/spanoc/netlib/include/net/tcp_connection.h
+  /home/spanoc/netlib/include/net/tcp_connection.h \
+  /home/spanoc/netlib/include/net/buffer.h

@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/spanoc/netlib/src/base/thread.cc" "CMakeFiles/test.dir/src/base/thread.cc.o" "gcc" "CMakeFiles/test.dir/src/base/thread.cc.o.d"
   "/home/spanoc/netlib/src/base/timestamp.cc" "CMakeFiles/test.dir/src/base/timestamp.cc.o" "gcc" "CMakeFiles/test.dir/src/base/timestamp.cc.o.d"
   "/home/spanoc/netlib/src/net/acceptor.cc" "CMakeFiles/test.dir/src/net/acceptor.cc.o" "gcc" "CMakeFiles/test.dir/src/net/acceptor.cc.o.d"
+  "/home/spanoc/netlib/src/net/buffer.cc" "CMakeFiles/test.dir/src/net/buffer.cc.o" "gcc" "CMakeFiles/test.dir/src/net/buffer.cc.o.d"
   "/home/spanoc/netlib/src/net/channel.cc" "CMakeFiles/test.dir/src/net/channel.cc.o" "gcc" "CMakeFiles/test.dir/src/net/channel.cc.o.d"
   "/home/spanoc/netlib/src/net/epoller.cc" "CMakeFiles/test.dir/src/net/epoller.cc.o" "gcc" "CMakeFiles/test.dir/src/net/epoller.cc.o.d"
   "/home/spanoc/netlib/src/net/event_loop.cc" "CMakeFiles/test.dir/src/net/event_loop.cc.o" "gcc" "CMakeFiles/test.dir/src/net/event_loop.cc.o.d"

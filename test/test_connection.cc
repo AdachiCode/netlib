@@ -22,8 +22,9 @@ void onMessage(const TcpConnectionPtr& conn, Buffer* buffer)
 {
 
   printf("onMessage(): received %zd bytes\n",
-         buffer->n_);
-  write(STDOUT_FILENO, buffer->buf_, buffer->n_);
+         buffer->readable_bytes());
+  write(STDOUT_FILENO, buffer->peek(), buffer->readable_bytes());
+  buffer->Retrieve(buffer->readable_bytes());
 }
 
 int main()

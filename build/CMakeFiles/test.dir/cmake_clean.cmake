@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/src/base/timestamp.cc.o.d"
   "CMakeFiles/test.dir/src/net/acceptor.cc.o"
   "CMakeFiles/test.dir/src/net/acceptor.cc.o.d"
+  "CMakeFiles/test.dir/src/net/buffer.cc.o"
+  "CMakeFiles/test.dir/src/net/buffer.cc.o.d"
   "CMakeFiles/test.dir/src/net/channel.cc.o"
   "CMakeFiles/test.dir/src/net/channel.cc.o.d"
   "CMakeFiles/test.dir/src/net/epoller.cc.o"

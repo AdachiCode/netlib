@@ -140,12 +140,13 @@ CMakeFiles/test.dir/test/test_connection.cc.o: \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/functional \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/std_function.h \
   /home/spanoc/netlib/include/net/tcp_connection.h \
-  /home/spanoc/netlib/include/net/event_loop.h \
-  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/atomic \
+  /home/spanoc/netlib/include/net/buffer.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/vector \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/stl_vector.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/stl_bvector.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/vector.tcc \
+  /home/spanoc/netlib/include/net/event_loop.h \
+  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/atomic \
   /home/spanoc/netlib/include/base/thread.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/string \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/char_traits.h \
@@ -190,5 +191,4 @@ CMakeFiles/test.dir/test/test_connection.cc.o: \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/queue \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/stl_heap.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/stl_queue.h \
-  /home/spanoc/netlib/include/base/timestamp.h \
-  /home/spanoc/netlib/include/net/buffer.h
+  /home/spanoc/netlib/include/base/timestamp.h

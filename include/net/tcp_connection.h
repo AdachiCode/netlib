@@ -5,6 +5,7 @@
 #include <functional>
 #include "base/noncopyable.h"
 #include "net/socket.h"
+#include "net/buffer.h"
 
 class Buffer;
 class Channel;
@@ -47,6 +48,9 @@ class TcpConnection : private NonCopyable, public std::enable_shared_from_this<T
   MessageCallBack message_call_back_;
   CloseCallBack close_call_back_;
   int index_; // 在TcpServer中hash表的索引
+
+  Buffer input_buffer_;
+  Buffer output_buffer_;
 };
 
 #endif

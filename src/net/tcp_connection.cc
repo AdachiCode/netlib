@@ -44,12 +44,9 @@ void TcpConnection::ConnectDestroyed() {
     
 void TcpConnection::HandleRead() {
   LOG_TRACE << "TcpConnection::HandleRead() fd : " << socket_->fd();
-  
-  char buf[65536];
-  ssize_t n = read(socket_->fd(), buf, sizeof(buf));
+  ssize_t n = input_buffer_.ReadFd(channel_->fd());
   if (n > 0) {
-    Buffer buffer(buf, n);
-    message_call_back_(shared_from_this(), &buffer);  
+    message_call_back_(shared_from_this(), &input_buffer_);  
   } else if (n == 0) {
     HandleClose();
   } else {

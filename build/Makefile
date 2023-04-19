@@ -345,6 +345,30 @@ src/net/acceptor.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/acceptor.cc.s
 .PHONY : src/net/acceptor.cc.s
 
+src/net/buffer.o: src/net/buffer.cc.o
+.PHONY : src/net/buffer.o
+
+# target to build an object file
+src/net/buffer.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/buffer.cc.o
+.PHONY : src/net/buffer.cc.o
+
+src/net/buffer.i: src/net/buffer.cc.i
+.PHONY : src/net/buffer.i
+
+# target to preprocess a source file
+src/net/buffer.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/buffer.cc.i
+.PHONY : src/net/buffer.cc.i
+
+src/net/buffer.s: src/net/buffer.cc.s
+.PHONY : src/net/buffer.s
+
+# target to generate assembly for a file
+src/net/buffer.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/buffer.cc.s
+.PHONY : src/net/buffer.cc.s
+
 src/net/channel.o: src/net/channel.cc.o
 .PHONY : src/net/channel.o
 
@@ -597,6 +621,9 @@ help:
 	@echo "... src/net/acceptor.o"
 	@echo "... src/net/acceptor.i"
 	@echo "... src/net/acceptor.s"
+	@echo "... src/net/buffer.o"
+	@echo "... src/net/buffer.i"
+	@echo "... src/net/buffer.s"
 	@echo "... src/net/channel.o"
 	@echo "... src/net/channel.i"
 	@echo "... src/net/channel.s"

@@ -55,6 +55,12 @@
 },
 {
   "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/buffer.cc.o -c /home/spanoc/netlib/src/net/buffer.cc",
+  "file": "/home/spanoc/netlib/src/net/buffer.cc",
+  "output": "CMakeFiles/test.dir/src/net/buffer.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
   "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/channel.cc.o -c /home/spanoc/netlib/src/net/channel.cc",
   "file": "/home/spanoc/netlib/src/net/channel.cc",
   "output": "CMakeFiles/test.dir/src/net/channel.cc.o"
