@@ -13,7 +13,7 @@ void onConnection(TcpConnectionPtr conn)
   }
   else
   {
-   printf("onConnection(): new connection [%d]\n",
+   printf("onConnection(): connection [%d] is down\n",
            conn->index());
   }
 }

@@ -20,6 +20,8 @@ class EventLoop : private NonCopyable {
   void Quit();
   void Wakeup();
   void RunInLoop(const std::function<void ()>& cb); 
+  // 如果在不同线程，使用队列可以方便线程间调用函数
+  // 如果在同一线程，可以将无法在channel的HandleEvent过程中调用的函数放在queue中延迟调用
   void QueueInLoop(const std::function<void ()>& cb); 
   void HandleWakeup();
   int CreateWakeupFd();

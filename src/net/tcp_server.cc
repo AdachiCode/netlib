@@ -16,6 +16,10 @@ TcpServer::TcpServer(EventLoop *loop, const InetAddress& listen_addr)
 
 TcpServer::~TcpServer() {
   assert(loop_->IsInLoopThread());
+  LOG_TRACE << "TcpServer::~TcpServer destructing";
+
+
+
 
 }
 
@@ -33,7 +37,18 @@ void TcpServer::NewConnection(int sockfd, const InetAddress& peeraddr) {
   connections_[index] = connection;
   connection->set_connection_call_back(connection_call_back_);
   connection->set_message_call_back(message_call_back_);
+  connection->set_close_call_back(std::bind(&TcpServer::CloseConnection, this, _1));
 
   connection->ConnectEstablished();
 }
       
+void TcpServer::CloseConnection(TcpConnectionPtr conn) {
+  assert(loop_->IsInLoopThread());
+  LOG_INFO << "TcpServer::CloseConnection - index : " << conn->index() << " - sockfd : " << conn->fd();
+  size_t n = connections_.erase(conn->index());
+  assert(n == 1);
+  // ioloop
+  // 调用QueueInLoop 一： 如果tcpserver和tcpconnection不在同一线程， 要跨线程调用
+  // 二：如果tcpserver和tcpconnection在同一线程，要延长tcpconnection的生命期直至channel的HandleEvent结束才能销毁tcpconnection以及channel
+  loop_->QueueInLoop(std::bind(&TcpConnection::ConnectDestroyed, conn));
+}

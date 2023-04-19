@@ -20,6 +20,7 @@ class TcpServer {
  private:
   typedef std::unordered_map<int, TcpConnectionPtr> TcpConnectionMap;
   void NewConnection(int sockfd, const InetAddress& peeraddr);
+  void CloseConnection(TcpConnectionPtr conn);
   
   EventLoop *loop_;
   InetAddress listen_addr_;
