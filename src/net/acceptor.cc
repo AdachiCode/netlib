@@ -13,6 +13,7 @@ Acceptor::Acceptor(EventLoop *loop, const InetAddress& listen_addr)
 }
 
 Acceptor::~Acceptor() {
+  assert(loop_->IsInLoopThread());
   accept_channel_->Remove();
 }
 

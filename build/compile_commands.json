@@ -85,6 +85,12 @@
 },
 {
   "directory": "/home/spanoc/netlib/build",
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/event_loop_threadpool.cc.o -c /home/spanoc/netlib/src/net/event_loop_threadpool.cc",
+  "file": "/home/spanoc/netlib/src/net/event_loop_threadpool.cc",
+  "output": "CMakeFiles/test.dir/src/net/event_loop_threadpool.cc.o"
+},
+{
+  "directory": "/home/spanoc/netlib/build",
   "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/src/net/socket.cc.o -c /home/spanoc/netlib/src/net/socket.cc",
   "file": "/home/spanoc/netlib/src/net/socket.cc",
   "output": "CMakeFiles/test.dir/src/net/socket.cc.o"
@@ -109,8 +115,8 @@
 },
 {
   "directory": "/home/spanoc/netlib/build",
-  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/test/test_send.cc.o -c /home/spanoc/netlib/test/test_send.cc",
-  "file": "/home/spanoc/netlib/test/test_send.cc",
-  "output": "CMakeFiles/test.dir/test/test_send.cc.o"
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/test/test_threadpool.cc.o -c /home/spanoc/netlib/test/test_threadpool.cc",
+  "file": "/home/spanoc/netlib/test/test_threadpool.cc",
+  "output": "CMakeFiles/test.dir/test/test_threadpool.cc.o"
 }
 ]

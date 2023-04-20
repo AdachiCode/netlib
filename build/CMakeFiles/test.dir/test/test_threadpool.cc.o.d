@@ -1,5 +1,5 @@
-CMakeFiles/test.dir/test/test_send.cc.o: \
-  /home/spanoc/netlib/test/test_send.cc \
+CMakeFiles/test.dir/test/test_threadpool.cc.o: \
+  /home/spanoc/netlib/test/test_threadpool.cc \
   /home/spanoc/netlib/include/net/tcp_server.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/memory \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.1/../../../../include/c++/12.2.1/bits/allocator.h \

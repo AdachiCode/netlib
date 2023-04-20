@@ -4,7 +4,9 @@
 #include <sys/socket.h>
 #include <fcntl.h>
 
-const char *kDefaultIp = "";
+const char *kDefaultIp = "172.29.52.153";
+
+IgnoreSigPipe ignore_sig_pipe;
 
 InetAddress::InetAddress(const std::string& ip, int port) {
   memset(&addr_, 0, sizeof(addr_));
@@ -60,7 +62,16 @@ int Socket::Accpet(InetAddress *peeraddr) {
 
 void Socket::SetReuseAddr() {
   int reuse = 1;
-  setsockopt(sockfd_, SOL_SOCKET, SO_REUSEADDR, &reuse, sizeof(reuse));
+  if (::setsockopt(sockfd_, SOL_SOCKET, SO_REUSEADDR, &reuse, static_cast<socklen_t>(sizeof(reuse))) < 0) {
+    LOG_ERROR << "Socket::SetReuseAddr() failed";
+  }
+}
+
+void Socket::SetKeepAlive() {
+  int optval = 1;
+  if (::setsockopt(sockfd_, SOL_SOCKET, SO_KEEPALIVE, &optval, static_cast<socklen_t>(sizeof(optval))) < 0) {
+    LOG_ERROR << "Socket::SetKeepAlive() failed";
+  }
 }
 
 void Socket::ShutDownWrite() {

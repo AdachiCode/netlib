@@ -36,6 +36,7 @@ class TcpConnection : private NonCopyable, public std::enable_shared_from_this<T
   void set_close_call_back(const CloseCallBack& cb) { close_call_back_ = cb; }
   int index() const { return index_;}
   int fd() const { return socket_->fd(); }
+  EventLoop *loop() { return loop_; }
   bool connected() const { return state_ == kConnected; }
  private:
   enum TcpState { kConnected, kConnecting, kDisconnecting, kDisconnected };

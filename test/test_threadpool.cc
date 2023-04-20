@@ -3,6 +3,7 @@
 #include "net/socket.h"
 #include <stdio.h>
 
+std::string message;
 std::string message1;
 std::string message2;
 
@@ -10,18 +11,21 @@ void onConnection(const TcpConnectionPtr& conn)
 {
   if (conn->connected())
   {
-    printf("onConnection(): new connection [%d]\n",
+    printf("onConnection(): tid=%d new connection [%d]\n",
+           CurrentThread::gettid(),
            conn->index());
-
-    sleep(5);
-
-    conn->Send(message1);
-    conn->Send(std::move(message2));
-    conn->ShutDown();
+    if (!message1.empty())
+      conn->Send(message1);
+    if (!message2.empty())
+      conn->Send(message2);
+    if (!message.empty())
+      conn->Send(message);
+    // conn->ShutDown();
   }
   else
   {
-    printf("onConnection(): connection [%d] is down\n",
+    printf("onConnection(): tid=%d connection [%d] is down\n",
+           CurrentThread::gettid(),
            conn->index());
   }
 }
@@ -29,7 +33,8 @@ void onConnection(const TcpConnectionPtr& conn)
 void onMessage(const TcpConnectionPtr& conn,
                Buffer* buf)
 {
-  printf("onMessage(): received %zd bytes from connection [%d]\n",
+  printf("onMessage(): tid=%d received %zd bytes from connection [%d]\n",
+         CurrentThread::gettid(),
          buf->readable_bytes(),
          conn->index());
 
@@ -48,6 +53,17 @@ int main(int argc, char* argv[])
     len1 = atoi(argv[1]);
     len2 = atoi(argv[2]);
   }
+  std::string line;
+  for (int i = 33; i < 127; ++i)
+  {
+    line.push_back(char(i));
+  }
+  line += line;
+
+  for (size_t i = 0; i < 127-33; ++i)
+  {
+    message += line.substr(i, 72) + '\n';
+  }
 
   message1.resize(len1);
   message2.resize(len2);
@@ -60,6 +76,9 @@ int main(int argc, char* argv[])
   TcpServer server(&loop, listenAddr);
   server.set_connection_call_back(onConnection);
   server.set_message_call_back(onMessage);
+  if (argc > 3) {
+    server.set_thread_num(atoi(argv[3]));
+  }
   server.Start();
 
   loop.Loop();

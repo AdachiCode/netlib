@@ -9,6 +9,7 @@
 #include "net/tcp_connection.h"
 
 class EventLoop;
+class EventLoopThreadPool;
 
 class TcpServer {
  public:
@@ -17,12 +18,15 @@ class TcpServer {
   void Start();
   void set_connection_call_back(const ConnectionCallBack& cb) { connection_call_back_ = cb; }
   void set_message_call_back(const MessageCallBack& cb) { message_call_back_ = cb; }
+  void set_thread_num(int num);
  private:
   typedef std::unordered_map<int, TcpConnectionPtr> TcpConnectionMap;
   void NewConnection(int sockfd, const InetAddress& peeraddr);
   void CloseConnection(TcpConnectionPtr conn);
+  void CloseConnectionInLoop(TcpConnectionPtr conn);
   
   EventLoop *loop_;
+  std::unique_ptr<EventLoopThreadPool> thread_pool_;
   InetAddress listen_addr_;
   std::unique_ptr<Acceptor> acceptor_;
   ConnectionCallBack connection_call_back_;

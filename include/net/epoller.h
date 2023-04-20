@@ -7,6 +7,8 @@
 class EventLoop;
 class Channel;
 
+enum ChannelState { kChannelNoExist = 0, kChannelExist }; // 表示channel的状态
+
 class Epoller : private NonCopyable {
  public:
   typedef std::vector<Channel *> ChannelList;

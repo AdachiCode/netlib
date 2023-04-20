@@ -1,6 +1,7 @@
 #include <assert.h>
 #include "base/logger.h"
 #include "net/channel.h"
+#include "net/epoller.h"
 #include "net/event_loop.h"
 
 Channel::Channel(EventLoop *loop, int fd) 
@@ -8,12 +9,13 @@ Channel::Channel(EventLoop *loop, int fd)
       fd_(fd),
       events_(0),
       revents_(0),
-      state_(0), // state_(kChannelNoExist)
+      state_(kChannelNoExist), 
       event_handing_(false) { 
 }
 
 Channel::~Channel() {
   assert(!event_handing_);
+  assert(state_ == kChannelNoExist); // 移除后才可析构
 }
 
 // 不能用if-else, 因为需要用EPOLLIN读到0来进行错误处理，关闭连接

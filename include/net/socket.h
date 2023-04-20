@@ -2,6 +2,7 @@
 #define NETLIB_NET_SOCKET_H
 
 #include <unistd.h>
+#include <signal.h>
 #include <netinet/in.h>
 #include "base/noncopyable.h"  
 
@@ -25,11 +26,19 @@ class Socket : private NonCopyable {
   void Listen();
   int Accpet(InetAddress *peeraddr);
   void SetReuseAddr();
+  void SetKeepAlive();
   void ShutDownWrite();
 
   int fd() const { return sockfd_; }
  private:
   int sockfd_;
+};
+
+class IgnoreSigPipe : private NonCopyable {
+ public:
+  IgnoreSigPipe() {
+    ::signal(SIGPIPE, SIG_IGN); 
+  }
 };
 
 #endif

@@ -18,6 +18,7 @@ TcpConnection::TcpConnection(EventLoop *loop, int sockfd, int index, InetAddress
   channel_->set_write_call_back(std::bind(&TcpConnection::HandleWrite, this));
   channel_->set_close_call_back(std::bind(&TcpConnection::HandleClose, this));
   channel_->set_error_call_back(std::bind(&TcpConnection::HandleError, this));
+  socket_->SetKeepAlive();
   // 不可在此调用 channel_->EnableRead 因为创建TCPConnection的线程和事件循环线程可能不同
   // 如果事件循环线程的事件到达了， 而TCPconnection还没构造完成， 就会出错
 }

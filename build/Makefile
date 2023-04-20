@@ -465,6 +465,30 @@ src/net/event_loop_thread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_thread.cc.s
 .PHONY : src/net/event_loop_thread.cc.s
 
+src/net/event_loop_threadpool.o: src/net/event_loop_threadpool.cc.o
+.PHONY : src/net/event_loop_threadpool.o
+
+# target to build an object file
+src/net/event_loop_threadpool.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_threadpool.cc.o
+.PHONY : src/net/event_loop_threadpool.cc.o
+
+src/net/event_loop_threadpool.i: src/net/event_loop_threadpool.cc.i
+.PHONY : src/net/event_loop_threadpool.i
+
+# target to preprocess a source file
+src/net/event_loop_threadpool.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_threadpool.cc.i
+.PHONY : src/net/event_loop_threadpool.cc.i
+
+src/net/event_loop_threadpool.s: src/net/event_loop_threadpool.cc.s
+.PHONY : src/net/event_loop_threadpool.s
+
+# target to generate assembly for a file
+src/net/event_loop_threadpool.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_threadpool.cc.s
+.PHONY : src/net/event_loop_threadpool.cc.s
+
 src/net/socket.o: src/net/socket.cc.o
 .PHONY : src/net/socket.o
 
@@ -561,29 +585,29 @@ src/net/timer_container.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/timer_container.cc.s
 .PHONY : src/net/timer_container.cc.s
 
-test/test_send.o: test/test_send.cc.o
-.PHONY : test/test_send.o
+test/test_threadpool.o: test/test_threadpool.cc.o
+.PHONY : test/test_threadpool.o
 
 # target to build an object file
-test/test_send.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_send.cc.o
-.PHONY : test/test_send.cc.o
+test/test_threadpool.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_threadpool.cc.o
+.PHONY : test/test_threadpool.cc.o
 
-test/test_send.i: test/test_send.cc.i
-.PHONY : test/test_send.i
+test/test_threadpool.i: test/test_threadpool.cc.i
+.PHONY : test/test_threadpool.i
 
 # target to preprocess a source file
-test/test_send.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_send.cc.i
-.PHONY : test/test_send.cc.i
+test/test_threadpool.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_threadpool.cc.i
+.PHONY : test/test_threadpool.cc.i
 
-test/test_send.s: test/test_send.cc.s
-.PHONY : test/test_send.s
+test/test_threadpool.s: test/test_threadpool.cc.s
+.PHONY : test/test_threadpool.s
 
 # target to generate assembly for a file
-test/test_send.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_send.cc.s
-.PHONY : test/test_send.cc.s
+test/test_threadpool.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_threadpool.cc.s
+.PHONY : test/test_threadpool.cc.s
 
 # Help Target
 help:
@@ -636,6 +660,9 @@ help:
 	@echo "... src/net/event_loop_thread.o"
 	@echo "... src/net/event_loop_thread.i"
 	@echo "... src/net/event_loop_thread.s"
+	@echo "... src/net/event_loop_threadpool.o"
+	@echo "... src/net/event_loop_threadpool.i"
+	@echo "... src/net/event_loop_threadpool.s"
 	@echo "... src/net/socket.o"
 	@echo "... src/net/socket.i"
 	@echo "... src/net/socket.s"
@@ -648,9 +675,9 @@ help:
 	@echo "... src/net/timer_container.o"
 	@echo "... src/net/timer_container.i"
 	@echo "... src/net/timer_container.s"
-	@echo "... test/test_send.o"
-	@echo "... test/test_send.i"
-	@echo "... test/test_send.s"
+	@echo "... test/test_threadpool.o"
+	@echo "... test/test_threadpool.i"
+	@echo "... test/test_threadpool.s"
 .PHONY : help
 
 
