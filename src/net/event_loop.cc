@@ -86,7 +86,7 @@ void EventLoop::RunInLoop(const std::function<void ()>& cb) {
 
 void EventLoop::QueueInLoop(const std::function<void ()>& cb) {
   MutexGuard lock(mutex_);
-  pending_functors_.push_back(cb);
+  pending_functors_.push_back(cb); // 在这会复制一份， 可以使用移动操作避免拷贝， 那么cb就不能是const引用，而是右值引用或者非引用类型，且调用QueueInLoop的时候要用std::move， 且调用push_back的时候也要std::move
   if (!IsInLoopThread() || calling_pending_functors_) {
     Wakeup();
   }

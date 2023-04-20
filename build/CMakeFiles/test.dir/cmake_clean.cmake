@@ -35,8 +35,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/src/net/tcp_server.cc.o.d"
   "CMakeFiles/test.dir/src/net/timer_container.cc.o"
   "CMakeFiles/test.dir/src/net/timer_container.cc.o.d"
-  "CMakeFiles/test.dir/test/test_connection.cc.o"
-  "CMakeFiles/test.dir/test/test_connection.cc.o.d"
+  "CMakeFiles/test.dir/test/test_send.cc.o"
+  "CMakeFiles/test.dir/test/test_send.cc.o.d"
   "test"
   "test.pdb"
 )

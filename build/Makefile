@@ -561,29 +561,29 @@ src/net/timer_container.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/timer_container.cc.s
 .PHONY : src/net/timer_container.cc.s
 
-test/test_connection.o: test/test_connection.cc.o
-.PHONY : test/test_connection.o
+test/test_send.o: test/test_send.cc.o
+.PHONY : test/test_send.o
 
 # target to build an object file
-test/test_connection.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_connection.cc.o
-.PHONY : test/test_connection.cc.o
+test/test_send.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_send.cc.o
+.PHONY : test/test_send.cc.o
 
-test/test_connection.i: test/test_connection.cc.i
-.PHONY : test/test_connection.i
+test/test_send.i: test/test_send.cc.i
+.PHONY : test/test_send.i
 
 # target to preprocess a source file
-test/test_connection.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_connection.cc.i
-.PHONY : test/test_connection.cc.i
+test/test_send.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_send.cc.i
+.PHONY : test/test_send.cc.i
 
-test/test_connection.s: test/test_connection.cc.s
-.PHONY : test/test_connection.s
+test/test_send.s: test/test_send.cc.s
+.PHONY : test/test_send.s
 
 # target to generate assembly for a file
-test/test_connection.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_connection.cc.s
-.PHONY : test/test_connection.cc.s
+test/test_send.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_send.cc.s
+.PHONY : test/test_send.cc.s
 
 # Help Target
 help:
@@ -648,9 +648,9 @@ help:
 	@echo "... src/net/timer_container.o"
 	@echo "... src/net/timer_container.i"
 	@echo "... src/net/timer_container.s"
-	@echo "... test/test_connection.o"
-	@echo "... test/test_connection.i"
-	@echo "... test/test_connection.s"
+	@echo "... test/test_send.o"
+	@echo "... test/test_send.i"
+	@echo "... test/test_send.s"
 .PHONY : help
 
 

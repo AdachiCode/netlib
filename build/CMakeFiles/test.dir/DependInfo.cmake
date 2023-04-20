@@ -26,7 +26,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/spanoc/netlib/src/net/tcp_connection.cc" "CMakeFiles/test.dir/src/net/tcp_connection.cc.o" "gcc" "CMakeFiles/test.dir/src/net/tcp_connection.cc.o.d"
   "/home/spanoc/netlib/src/net/tcp_server.cc" "CMakeFiles/test.dir/src/net/tcp_server.cc.o" "gcc" "CMakeFiles/test.dir/src/net/tcp_server.cc.o.d"
   "/home/spanoc/netlib/src/net/timer_container.cc" "CMakeFiles/test.dir/src/net/timer_container.cc.o" "gcc" "CMakeFiles/test.dir/src/net/timer_container.cc.o.d"
-  "/home/spanoc/netlib/test/test_connection.cc" "CMakeFiles/test.dir/test/test_connection.cc.o" "gcc" "CMakeFiles/test.dir/test/test_connection.cc.o.d"
+  "/home/spanoc/netlib/test/test_send.cc" "CMakeFiles/test.dir/test/test_send.cc.o" "gcc" "CMakeFiles/test.dir/test/test_send.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

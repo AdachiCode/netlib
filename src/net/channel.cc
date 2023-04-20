@@ -16,6 +16,8 @@ Channel::~Channel() {
   assert(!event_handing_);
 }
 
+// 不能用if-else, 因为需要用EPOLLIN读到0来进行错误处理，关闭连接
+// 出错时EPOLLERR EPOLLHUB EPOLLIN会一起出现，由EPOLLIN read 0 来关闭连接 https://blog.csdn.net/hdadiao/article/details/104999172
 void Channel::HandleEvent() {
   assert(loop_->IsInLoopThread());  
   event_handing_ = true;
@@ -40,5 +42,6 @@ void Channel::Update() {
 }
 
 void Channel::Remove() {
+  events_ = 0;
   loop_->RemoveChannel(this);
 }

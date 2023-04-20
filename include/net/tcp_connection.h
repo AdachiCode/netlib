@@ -24,6 +24,12 @@ class TcpConnection : private NonCopyable, public std::enable_shared_from_this<T
   //  这两个函数来管理channel在循环中的添加和删除,并回调用户函数  由TcpServer调用这两个函数
   void ConnectEstablished();
   void ConnectDestroyed();
+  void ShutDown();
+  void ShutDownInLoop();
+  // 用string在线程间发送数据很容易保证线程安全性
+  void Send(const std::string& message);
+  void Send(std::string&& message); 
+  void SendInLoop(const std::string& message);
   
   void set_connection_call_back(const ConnectionCallBack& cb) { connection_call_back_ = cb; }
   void set_message_call_back(const MessageCallBack& cb) { message_call_back_ = cb; }

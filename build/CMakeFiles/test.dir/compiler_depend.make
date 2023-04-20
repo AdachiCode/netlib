@@ -1378,6 +1378,94 @@ CMakeFiles/test.dir/src/net/acceptor.cc.o: /home/spanoc/netlib/src/net/acceptor.
   /usr/include/c++/12.2.1/bits/stl_heap.h \
   /usr/include/c++/12.2.1/bits/stl_queue.h
 
+CMakeFiles/test.dir/src/net/buffer.cc.o: /home/spanoc/netlib/src/net/buffer.cc \
+  /usr/include/assert.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/sys/uio.h \
+  /usr/include/sys/types.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/types/clock_t.h \
+  /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/timer_t.h \
+  /usr/lib/clang/15.0.7/include/stddef.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/endian.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/uintn-identity.h \
+  /usr/include/sys/select.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/__sigset_t.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/thread-shared-types.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/struct_mutex.h \
+  /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/types/struct_iovec.h \
+  /usr/include/bits/uio_lim.h \
+  /usr/include/bits/uio-ext.h \
+  /home/spanoc/netlib/include/net/buffer.h \
+  /usr/lib/clang/15.0.7/include/__stddef_max_align_t.h \
+  /usr/include/c++/12.2.1/vector \
+  /usr/include/c++/12.2.1/bits/stl_algobase.h \
+  /usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
+  /usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
+  /usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+  /usr/include/c++/12.2.1/bits/functexcept.h \
+  /usr/include/c++/12.2.1/bits/exception_defines.h \
+  /usr/include/c++/12.2.1/bits/cpp_type_traits.h \
+  /usr/include/c++/12.2.1/ext/type_traits.h \
+  /usr/include/c++/12.2.1/ext/numeric_traits.h \
+  /usr/include/c++/12.2.1/bits/stl_pair.h \
+  /usr/include/c++/12.2.1/type_traits \
+  /usr/include/c++/12.2.1/bits/move.h \
+  /usr/include/c++/12.2.1/bits/utility.h \
+  /usr/include/c++/12.2.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/12.2.1/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/12.2.1/bits/concept_check.h \
+  /usr/include/c++/12.2.1/debug/assertions.h \
+  /usr/include/c++/12.2.1/bits/stl_iterator.h \
+  /usr/include/c++/12.2.1/bits/ptr_traits.h \
+  /usr/include/c++/12.2.1/debug/debug.h \
+  /usr/include/c++/12.2.1/bits/predefined_ops.h \
+  /usr/include/c++/12.2.1/bits/allocator.h \
+  /usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
+  /usr/include/c++/12.2.1/bits/new_allocator.h \
+  /usr/include/c++/12.2.1/new \
+  /usr/include/c++/12.2.1/bits/exception.h \
+  /usr/include/c++/12.2.1/bits/memoryfwd.h \
+  /usr/include/c++/12.2.1/bits/stl_construct.h \
+  /usr/include/c++/12.2.1/bits/stl_uninitialized.h \
+  /usr/include/c++/12.2.1/ext/alloc_traits.h \
+  /usr/include/c++/12.2.1/bits/alloc_traits.h \
+  /usr/include/c++/12.2.1/bits/stl_vector.h \
+  /usr/include/c++/12.2.1/initializer_list \
+  /usr/include/c++/12.2.1/bits/stl_bvector.h \
+  /usr/include/c++/12.2.1/bits/functional_hash.h \
+  /usr/include/c++/12.2.1/bits/hash_bytes.h \
+  /usr/include/c++/12.2.1/bits/refwrap.h \
+  /usr/include/c++/12.2.1/bits/invoke.h \
+  /usr/include/c++/12.2.1/bits/stl_function.h \
+  /usr/include/c++/12.2.1/backward/binders.h \
+  /usr/include/c++/12.2.1/bits/range_access.h \
+  /usr/include/c++/12.2.1/bits/vector.tcc
+
 CMakeFiles/test.dir/src/net/channel.cc.o: /home/spanoc/netlib/src/net/channel.cc \
   /usr/include/assert.h \
   /usr/include/features.h \
@@ -2662,10 +2750,10 @@ CMakeFiles/test.dir/src/net/tcp_connection.cc.o: /home/spanoc/netlib/src/net/tcp
   /usr/include/asm-generic/sockios.h \
   /usr/include/bits/types/struct_osockaddr.h \
   /usr/include/bits/in.h \
+  /home/spanoc/netlib/include/net/buffer.h \
   /home/spanoc/netlib/include/net/channel.h \
   /usr/include/sys/epoll.h \
-  /usr/include/bits/epoll.h \
-  /home/spanoc/netlib/include/net/buffer.h
+  /usr/include/bits/epoll.h
 
 CMakeFiles/test.dir/src/net/tcp_server.cc.o: /home/spanoc/netlib/src/net/tcp_server.cc \
   /usr/include/assert.h \
@@ -2912,7 +3000,8 @@ CMakeFiles/test.dir/src/net/tcp_server.cc.o: /home/spanoc/netlib/src/net/tcp_ser
   /home/spanoc/netlib/include/net/channel.h \
   /usr/include/sys/epoll.h \
   /usr/include/bits/epoll.h \
-  /home/spanoc/netlib/include/net/tcp_connection.h
+  /home/spanoc/netlib/include/net/tcp_connection.h \
+  /home/spanoc/netlib/include/net/buffer.h
 
 CMakeFiles/test.dir/src/net/timer_container.cc.o: /home/spanoc/netlib/src/net/timer_container.cc \
   /usr/include/sys/timerfd.h \
@@ -3134,7 +3223,7 @@ CMakeFiles/test.dir/src/net/timer_container.cc.o: /home/spanoc/netlib/src/net/ti
   /usr/include/bits/unistd_ext.h \
   /usr/include/linux/close_range.h
 
-CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_connection.cc \
+CMakeFiles/test.dir/test/test_send.cc.o: /home/spanoc/netlib/test/test_send.cc \
   /home/spanoc/netlib/include/net/tcp_server.h \
   /usr/include/c++/12.2.1/memory \
   /usr/include/c++/12.2.1/bits/allocator.h \
@@ -3314,12 +3403,13 @@ CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_con
   /usr/include/c++/12.2.1/functional \
   /usr/include/c++/12.2.1/bits/std_function.h \
   /home/spanoc/netlib/include/net/tcp_connection.h \
-  /home/spanoc/netlib/include/net/event_loop.h \
-  /usr/include/c++/12.2.1/atomic \
+  /home/spanoc/netlib/include/net/buffer.h \
   /usr/include/c++/12.2.1/vector \
   /usr/include/c++/12.2.1/bits/stl_vector.h \
   /usr/include/c++/12.2.1/bits/stl_bvector.h \
   /usr/include/c++/12.2.1/bits/vector.tcc \
+  /home/spanoc/netlib/include/net/event_loop.h \
+  /usr/include/c++/12.2.1/atomic \
   /home/spanoc/netlib/include/base/thread.h \
   /usr/include/c++/12.2.1/string \
   /usr/include/c++/12.2.1/bits/char_traits.h \
@@ -3373,11 +3463,8 @@ CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_con
   /usr/include/c++/12.2.1/queue \
   /usr/include/c++/12.2.1/bits/stl_heap.h \
   /usr/include/c++/12.2.1/bits/stl_queue.h \
-  /home/spanoc/netlib/include/base/timestamp.h \
-  /home/spanoc/netlib/include/net/buffer.h
+  /home/spanoc/netlib/include/base/timestamp.h
 
-
-/home/spanoc/netlib/test/test_connection.cc:
 
 /home/spanoc/netlib/src/net/timer_container.cc:
 
@@ -3403,6 +3490,12 @@ CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_con
 
 /home/spanoc/netlib/include/net/event_loop_thread.h:
 
+/home/spanoc/netlib/src/net/event_loop_thread.cc:
+
+/usr/include/sys/eventfd.h:
+
+/home/spanoc/netlib/src/net/event_loop.cc:
+
 /usr/include/bits/struct_mutex.h:
 
 /usr/include/bits/thread-shared-types.h:
@@ -3413,8 +3506,6 @@ CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_con
 
 /usr/include/bits/atomic_wide_counter.h:
 
-/usr/include/bits/posix_opt.h:
-
 /usr/include/bits/types/clock_t.h:
 
 /usr/include/bits/types/struct_timeval.h:
@@ -3424,8 +3515,6 @@ CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_con
 /usr/include/bits/stdio_lim.h:
 
 /usr/include/bits/types/struct_sched_param.h:
-
-/usr/include/sys/eventfd.h:
 
 /usr/include/bits/endianness.h:
 
@@ -3525,13 +3614,13 @@ CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_con
 
 /usr/include/asm/unistd_64.h:
 
-/usr/include/bits/eventfd.h:
-
 /usr/include/c++/12.2.1/bits/stl_raw_storage_iter.h:
 
-/home/spanoc/netlib/src/net/event_loop_thread.cc:
-
 /usr/include/c++/12.2.1/memory:
+
+/home/spanoc/netlib/include/net/epoller.h:
+
+/usr/include/c++/12.2.1/bits/ptr_traits.h:
 
 /usr/lib/clang/15.0.7/include/stdint.h:
 
@@ -3548,6 +3637,8 @@ CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_con
 /usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
 
 /usr/include/c++/12.2.1/bits/stl_pair.h:
+
+/usr/include/bits/uio_lim.h:
 
 /usr/include/c++/12.2.1/backward/binders.h:
 
@@ -3638,6 +3729,8 @@ CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_con
 /home/spanoc/netlib/include/base/async_logging.h:
 
 /usr/include/wchar.h:
+
+/home/spanoc/netlib/test/test_send.cc:
 
 /usr/include/c++/12.2.1/bits/char_traits.h:
 
@@ -3869,10 +3962,6 @@ CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_con
 
 /home/spanoc/netlib/include/base/file_util.h:
 
-/usr/include/c++/12.2.1/bits/ptr_traits.h:
-
-/home/spanoc/netlib/include/net/epoller.h:
-
 /usr/include/c++/12.2.1/bits/stl_tempbuf.h:
 
 /usr/include/sys/syscall.h:
@@ -3929,6 +4018,16 @@ CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_con
 
 /usr/include/c++/12.2.1/deque:
 
+/usr/include/bits/eventfd.h:
+
+/home/spanoc/netlib/src/net/buffer.cc:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/sys/uio.h:
+
+/usr/include/bits/uio-ext.h:
+
 /home/spanoc/netlib/src/net/channel.cc:
 
 /usr/include/stdint.h:
@@ -3936,5 +4035,3 @@ CMakeFiles/test.dir/test/test_connection.cc.o: /home/spanoc/netlib/test/test_con
 /usr/include/endian.h:
 
 /home/spanoc/netlib/src/net/epoller.cc:
-
-/home/spanoc/netlib/src/net/event_loop.cc:

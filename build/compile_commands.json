@@ -109,8 +109,8 @@
 },
 {
   "directory": "/home/spanoc/netlib/build",
-  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/test/test_connection.cc.o -c /home/spanoc/netlib/test/test_connection.cc",
-  "file": "/home/spanoc/netlib/test/test_connection.cc",
-  "output": "CMakeFiles/test.dir/test/test_connection.cc.o"
+  "command": "clang++  -I/home/spanoc/netlib/include  -Wall -Wthread-safety -fsanitize=thread -g -o CMakeFiles/test.dir/test/test_send.cc.o -c /home/spanoc/netlib/test/test_send.cc",
+  "file": "/home/spanoc/netlib/test/test_send.cc",
+  "output": "CMakeFiles/test.dir/test/test_send.cc.o"
 }
 ]

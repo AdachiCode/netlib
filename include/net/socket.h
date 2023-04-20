@@ -25,6 +25,7 @@ class Socket : private NonCopyable {
   void Listen();
   int Accpet(InetAddress *peeraddr);
   void SetReuseAddr();
+  void ShutDownWrite();
 
   int fd() const { return sockfd_; }
  private:

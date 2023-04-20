@@ -26,6 +26,7 @@ class Channel : private NonCopyable {
   void set_close_call_back(const EventCallBack& cb) { close_call_back_ = cb; }
   void set_error_call_back(const EventCallBack& cb) { error_call_back_ = cb;}
   bool IsNoneEvent() { return events_ == 0; }
+  bool IsWriting() { return events_ & kWriteEvent; } // 如果注册了写事件，则发送缓冲区中一定还存有数据
 
   void EnableReading() { events_ |= kReadEvent; Update(); }
   void EnableWriting() { events_ |= kWriteEvent; Update(); }
