@@ -14,7 +14,7 @@ void LogFile::Append(const char *log, size_t len) {
     RollFile();
   } else {
     ++count_;
-    if (count_ >= 1024) {  // 写一定次数就flush
+    if (count_ >= 1) {  // 写一定次数就flush
       count_ = 0;
       file_->Flush();
     }

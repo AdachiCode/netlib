@@ -25,11 +25,12 @@ TcpServer::~TcpServer() {
     conn->loop()->RunInLoop(std::bind(&TcpConnection::ConnectDestroyed, conn));
   }
 }
-
+// 只能调用一次 可以由其他线程调用 
 void TcpServer::Start() {
-  assert(loop_->IsInLoopThread());
+  // assert(loop_->IsInLoopThread());
   thread_pool_->Start();
-  acceptor_->Listen();
+  loop_->RunInLoop(std::bind(&Acceptor::Listen, acceptor_.get()));
+  // acceptor_->Listen();
   LOG_INFO << "TcpServer Start";
 }
 

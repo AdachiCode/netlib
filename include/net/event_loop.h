@@ -37,6 +37,9 @@ class EventLoop : private NonCopyable {
     Timestamp time(Timestamp::Now() + Timestamp(static_cast<int64_t>(interval * 1000000)));
     return timer_container_->AddTimer(cb, time, interval);
   }
+  void RemoveTimer(TimerWeakPtr timer) {
+    timer_container_->RemoveTimer(timer);
+  }
 
   bool IsInLoopThread() {
     return thread_id_ == CurrentThread::gettid();

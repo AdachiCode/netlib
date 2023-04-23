@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named client
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
-.PHONY : test
+client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client
+.PHONY : client
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
+.PHONY : client/fast
 
 src/base/async_logging.o: src/base/async_logging.cc.o
 .PHONY : src/base/async_logging.o
 
 # target to build an object file
 src/base/async_logging.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/async_logging.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/async_logging.cc.o
 .PHONY : src/base/async_logging.cc.o
 
 src/base/async_logging.i: src/base/async_logging.cc.i
@@ -142,7 +142,7 @@ src/base/async_logging.i: src/base/async_logging.cc.i
 
 # target to preprocess a source file
 src/base/async_logging.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/async_logging.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/async_logging.cc.i
 .PHONY : src/base/async_logging.cc.i
 
 src/base/async_logging.s: src/base/async_logging.cc.s
@@ -150,7 +150,7 @@ src/base/async_logging.s: src/base/async_logging.cc.s
 
 # target to generate assembly for a file
 src/base/async_logging.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/async_logging.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/async_logging.cc.s
 .PHONY : src/base/async_logging.cc.s
 
 src/base/current_thread.o: src/base/current_thread.cc.o
@@ -158,7 +158,7 @@ src/base/current_thread.o: src/base/current_thread.cc.o
 
 # target to build an object file
 src/base/current_thread.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/current_thread.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/current_thread.cc.o
 .PHONY : src/base/current_thread.cc.o
 
 src/base/current_thread.i: src/base/current_thread.cc.i
@@ -166,7 +166,7 @@ src/base/current_thread.i: src/base/current_thread.cc.i
 
 # target to preprocess a source file
 src/base/current_thread.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/current_thread.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/current_thread.cc.i
 .PHONY : src/base/current_thread.cc.i
 
 src/base/current_thread.s: src/base/current_thread.cc.s
@@ -174,7 +174,7 @@ src/base/current_thread.s: src/base/current_thread.cc.s
 
 # target to generate assembly for a file
 src/base/current_thread.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/current_thread.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/current_thread.cc.s
 .PHONY : src/base/current_thread.cc.s
 
 src/base/file_util.o: src/base/file_util.cc.o
@@ -182,7 +182,7 @@ src/base/file_util.o: src/base/file_util.cc.o
 
 # target to build an object file
 src/base/file_util.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/file_util.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/file_util.cc.o
 .PHONY : src/base/file_util.cc.o
 
 src/base/file_util.i: src/base/file_util.cc.i
@@ -190,7 +190,7 @@ src/base/file_util.i: src/base/file_util.cc.i
 
 # target to preprocess a source file
 src/base/file_util.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/file_util.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/file_util.cc.i
 .PHONY : src/base/file_util.cc.i
 
 src/base/file_util.s: src/base/file_util.cc.s
@@ -198,7 +198,7 @@ src/base/file_util.s: src/base/file_util.cc.s
 
 # target to generate assembly for a file
 src/base/file_util.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/file_util.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/file_util.cc.s
 .PHONY : src/base/file_util.cc.s
 
 src/base/logfile.o: src/base/logfile.cc.o
@@ -206,7 +206,7 @@ src/base/logfile.o: src/base/logfile.cc.o
 
 # target to build an object file
 src/base/logfile.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/logfile.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/logfile.cc.o
 .PHONY : src/base/logfile.cc.o
 
 src/base/logfile.i: src/base/logfile.cc.i
@@ -214,7 +214,7 @@ src/base/logfile.i: src/base/logfile.cc.i
 
 # target to preprocess a source file
 src/base/logfile.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/logfile.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/logfile.cc.i
 .PHONY : src/base/logfile.cc.i
 
 src/base/logfile.s: src/base/logfile.cc.s
@@ -222,7 +222,7 @@ src/base/logfile.s: src/base/logfile.cc.s
 
 # target to generate assembly for a file
 src/base/logfile.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/logfile.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/logfile.cc.s
 .PHONY : src/base/logfile.cc.s
 
 src/base/logger.o: src/base/logger.cc.o
@@ -230,7 +230,7 @@ src/base/logger.o: src/base/logger.cc.o
 
 # target to build an object file
 src/base/logger.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/logger.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/logger.cc.o
 .PHONY : src/base/logger.cc.o
 
 src/base/logger.i: src/base/logger.cc.i
@@ -238,7 +238,7 @@ src/base/logger.i: src/base/logger.cc.i
 
 # target to preprocess a source file
 src/base/logger.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/logger.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/logger.cc.i
 .PHONY : src/base/logger.cc.i
 
 src/base/logger.s: src/base/logger.cc.s
@@ -246,7 +246,7 @@ src/base/logger.s: src/base/logger.cc.s
 
 # target to generate assembly for a file
 src/base/logger.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/logger.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/logger.cc.s
 .PHONY : src/base/logger.cc.s
 
 src/base/logstream.o: src/base/logstream.cc.o
@@ -254,7 +254,7 @@ src/base/logstream.o: src/base/logstream.cc.o
 
 # target to build an object file
 src/base/logstream.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/logstream.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/logstream.cc.o
 .PHONY : src/base/logstream.cc.o
 
 src/base/logstream.i: src/base/logstream.cc.i
@@ -262,7 +262,7 @@ src/base/logstream.i: src/base/logstream.cc.i
 
 # target to preprocess a source file
 src/base/logstream.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/logstream.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/logstream.cc.i
 .PHONY : src/base/logstream.cc.i
 
 src/base/logstream.s: src/base/logstream.cc.s
@@ -270,7 +270,7 @@ src/base/logstream.s: src/base/logstream.cc.s
 
 # target to generate assembly for a file
 src/base/logstream.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/logstream.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/logstream.cc.s
 .PHONY : src/base/logstream.cc.s
 
 src/base/thread.o: src/base/thread.cc.o
@@ -278,7 +278,7 @@ src/base/thread.o: src/base/thread.cc.o
 
 # target to build an object file
 src/base/thread.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/thread.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/thread.cc.o
 .PHONY : src/base/thread.cc.o
 
 src/base/thread.i: src/base/thread.cc.i
@@ -286,7 +286,7 @@ src/base/thread.i: src/base/thread.cc.i
 
 # target to preprocess a source file
 src/base/thread.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/thread.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/thread.cc.i
 .PHONY : src/base/thread.cc.i
 
 src/base/thread.s: src/base/thread.cc.s
@@ -294,7 +294,7 @@ src/base/thread.s: src/base/thread.cc.s
 
 # target to generate assembly for a file
 src/base/thread.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/thread.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/thread.cc.s
 .PHONY : src/base/thread.cc.s
 
 src/base/timestamp.o: src/base/timestamp.cc.o
@@ -302,7 +302,7 @@ src/base/timestamp.o: src/base/timestamp.cc.o
 
 # target to build an object file
 src/base/timestamp.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/timestamp.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/timestamp.cc.o
 .PHONY : src/base/timestamp.cc.o
 
 src/base/timestamp.i: src/base/timestamp.cc.i
@@ -310,7 +310,7 @@ src/base/timestamp.i: src/base/timestamp.cc.i
 
 # target to preprocess a source file
 src/base/timestamp.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/timestamp.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/timestamp.cc.i
 .PHONY : src/base/timestamp.cc.i
 
 src/base/timestamp.s: src/base/timestamp.cc.s
@@ -318,7 +318,7 @@ src/base/timestamp.s: src/base/timestamp.cc.s
 
 # target to generate assembly for a file
 src/base/timestamp.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/base/timestamp.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/base/timestamp.cc.s
 .PHONY : src/base/timestamp.cc.s
 
 src/net/acceptor.o: src/net/acceptor.cc.o
@@ -326,7 +326,7 @@ src/net/acceptor.o: src/net/acceptor.cc.o
 
 # target to build an object file
 src/net/acceptor.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/acceptor.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/acceptor.cc.o
 .PHONY : src/net/acceptor.cc.o
 
 src/net/acceptor.i: src/net/acceptor.cc.i
@@ -334,7 +334,7 @@ src/net/acceptor.i: src/net/acceptor.cc.i
 
 # target to preprocess a source file
 src/net/acceptor.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/acceptor.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/acceptor.cc.i
 .PHONY : src/net/acceptor.cc.i
 
 src/net/acceptor.s: src/net/acceptor.cc.s
@@ -342,7 +342,7 @@ src/net/acceptor.s: src/net/acceptor.cc.s
 
 # target to generate assembly for a file
 src/net/acceptor.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/acceptor.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/acceptor.cc.s
 .PHONY : src/net/acceptor.cc.s
 
 src/net/buffer.o: src/net/buffer.cc.o
@@ -350,7 +350,7 @@ src/net/buffer.o: src/net/buffer.cc.o
 
 # target to build an object file
 src/net/buffer.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/buffer.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/buffer.cc.o
 .PHONY : src/net/buffer.cc.o
 
 src/net/buffer.i: src/net/buffer.cc.i
@@ -358,7 +358,7 @@ src/net/buffer.i: src/net/buffer.cc.i
 
 # target to preprocess a source file
 src/net/buffer.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/buffer.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/buffer.cc.i
 .PHONY : src/net/buffer.cc.i
 
 src/net/buffer.s: src/net/buffer.cc.s
@@ -366,7 +366,7 @@ src/net/buffer.s: src/net/buffer.cc.s
 
 # target to generate assembly for a file
 src/net/buffer.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/buffer.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/buffer.cc.s
 .PHONY : src/net/buffer.cc.s
 
 src/net/channel.o: src/net/channel.cc.o
@@ -374,7 +374,7 @@ src/net/channel.o: src/net/channel.cc.o
 
 # target to build an object file
 src/net/channel.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/channel.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/channel.cc.o
 .PHONY : src/net/channel.cc.o
 
 src/net/channel.i: src/net/channel.cc.i
@@ -382,7 +382,7 @@ src/net/channel.i: src/net/channel.cc.i
 
 # target to preprocess a source file
 src/net/channel.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/channel.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/channel.cc.i
 .PHONY : src/net/channel.cc.i
 
 src/net/channel.s: src/net/channel.cc.s
@@ -390,15 +390,39 @@ src/net/channel.s: src/net/channel.cc.s
 
 # target to generate assembly for a file
 src/net/channel.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/channel.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/channel.cc.s
 .PHONY : src/net/channel.cc.s
+
+src/net/connector.o: src/net/connector.cc.o
+.PHONY : src/net/connector.o
+
+# target to build an object file
+src/net/connector.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/connector.cc.o
+.PHONY : src/net/connector.cc.o
+
+src/net/connector.i: src/net/connector.cc.i
+.PHONY : src/net/connector.i
+
+# target to preprocess a source file
+src/net/connector.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/connector.cc.i
+.PHONY : src/net/connector.cc.i
+
+src/net/connector.s: src/net/connector.cc.s
+.PHONY : src/net/connector.s
+
+# target to generate assembly for a file
+src/net/connector.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/connector.cc.s
+.PHONY : src/net/connector.cc.s
 
 src/net/epoller.o: src/net/epoller.cc.o
 .PHONY : src/net/epoller.o
 
 # target to build an object file
 src/net/epoller.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/epoller.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/epoller.cc.o
 .PHONY : src/net/epoller.cc.o
 
 src/net/epoller.i: src/net/epoller.cc.i
@@ -406,7 +430,7 @@ src/net/epoller.i: src/net/epoller.cc.i
 
 # target to preprocess a source file
 src/net/epoller.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/epoller.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/epoller.cc.i
 .PHONY : src/net/epoller.cc.i
 
 src/net/epoller.s: src/net/epoller.cc.s
@@ -414,7 +438,7 @@ src/net/epoller.s: src/net/epoller.cc.s
 
 # target to generate assembly for a file
 src/net/epoller.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/epoller.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/epoller.cc.s
 .PHONY : src/net/epoller.cc.s
 
 src/net/event_loop.o: src/net/event_loop.cc.o
@@ -422,7 +446,7 @@ src/net/event_loop.o: src/net/event_loop.cc.o
 
 # target to build an object file
 src/net/event_loop.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/event_loop.cc.o
 .PHONY : src/net/event_loop.cc.o
 
 src/net/event_loop.i: src/net/event_loop.cc.i
@@ -430,7 +454,7 @@ src/net/event_loop.i: src/net/event_loop.cc.i
 
 # target to preprocess a source file
 src/net/event_loop.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/event_loop.cc.i
 .PHONY : src/net/event_loop.cc.i
 
 src/net/event_loop.s: src/net/event_loop.cc.s
@@ -438,7 +462,7 @@ src/net/event_loop.s: src/net/event_loop.cc.s
 
 # target to generate assembly for a file
 src/net/event_loop.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/event_loop.cc.s
 .PHONY : src/net/event_loop.cc.s
 
 src/net/event_loop_thread.o: src/net/event_loop_thread.cc.o
@@ -446,7 +470,7 @@ src/net/event_loop_thread.o: src/net/event_loop_thread.cc.o
 
 # target to build an object file
 src/net/event_loop_thread.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_thread.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/event_loop_thread.cc.o
 .PHONY : src/net/event_loop_thread.cc.o
 
 src/net/event_loop_thread.i: src/net/event_loop_thread.cc.i
@@ -454,7 +478,7 @@ src/net/event_loop_thread.i: src/net/event_loop_thread.cc.i
 
 # target to preprocess a source file
 src/net/event_loop_thread.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_thread.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/event_loop_thread.cc.i
 .PHONY : src/net/event_loop_thread.cc.i
 
 src/net/event_loop_thread.s: src/net/event_loop_thread.cc.s
@@ -462,7 +486,7 @@ src/net/event_loop_thread.s: src/net/event_loop_thread.cc.s
 
 # target to generate assembly for a file
 src/net/event_loop_thread.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_thread.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/event_loop_thread.cc.s
 .PHONY : src/net/event_loop_thread.cc.s
 
 src/net/event_loop_threadpool.o: src/net/event_loop_threadpool.cc.o
@@ -470,7 +494,7 @@ src/net/event_loop_threadpool.o: src/net/event_loop_threadpool.cc.o
 
 # target to build an object file
 src/net/event_loop_threadpool.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_threadpool.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/event_loop_threadpool.cc.o
 .PHONY : src/net/event_loop_threadpool.cc.o
 
 src/net/event_loop_threadpool.i: src/net/event_loop_threadpool.cc.i
@@ -478,7 +502,7 @@ src/net/event_loop_threadpool.i: src/net/event_loop_threadpool.cc.i
 
 # target to preprocess a source file
 src/net/event_loop_threadpool.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_threadpool.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/event_loop_threadpool.cc.i
 .PHONY : src/net/event_loop_threadpool.cc.i
 
 src/net/event_loop_threadpool.s: src/net/event_loop_threadpool.cc.s
@@ -486,7 +510,7 @@ src/net/event_loop_threadpool.s: src/net/event_loop_threadpool.cc.s
 
 # target to generate assembly for a file
 src/net/event_loop_threadpool.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/event_loop_threadpool.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/event_loop_threadpool.cc.s
 .PHONY : src/net/event_loop_threadpool.cc.s
 
 src/net/socket.o: src/net/socket.cc.o
@@ -494,7 +518,7 @@ src/net/socket.o: src/net/socket.cc.o
 
 # target to build an object file
 src/net/socket.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/socket.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/socket.cc.o
 .PHONY : src/net/socket.cc.o
 
 src/net/socket.i: src/net/socket.cc.i
@@ -502,7 +526,7 @@ src/net/socket.i: src/net/socket.cc.i
 
 # target to preprocess a source file
 src/net/socket.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/socket.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/socket.cc.i
 .PHONY : src/net/socket.cc.i
 
 src/net/socket.s: src/net/socket.cc.s
@@ -510,15 +534,39 @@ src/net/socket.s: src/net/socket.cc.s
 
 # target to generate assembly for a file
 src/net/socket.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/socket.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/socket.cc.s
 .PHONY : src/net/socket.cc.s
+
+src/net/tcp_client.o: src/net/tcp_client.cc.o
+.PHONY : src/net/tcp_client.o
+
+# target to build an object file
+src/net/tcp_client.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/tcp_client.cc.o
+.PHONY : src/net/tcp_client.cc.o
+
+src/net/tcp_client.i: src/net/tcp_client.cc.i
+.PHONY : src/net/tcp_client.i
+
+# target to preprocess a source file
+src/net/tcp_client.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/tcp_client.cc.i
+.PHONY : src/net/tcp_client.cc.i
+
+src/net/tcp_client.s: src/net/tcp_client.cc.s
+.PHONY : src/net/tcp_client.s
+
+# target to generate assembly for a file
+src/net/tcp_client.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/tcp_client.cc.s
+.PHONY : src/net/tcp_client.cc.s
 
 src/net/tcp_connection.o: src/net/tcp_connection.cc.o
 .PHONY : src/net/tcp_connection.o
 
 # target to build an object file
 src/net/tcp_connection.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_connection.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/tcp_connection.cc.o
 .PHONY : src/net/tcp_connection.cc.o
 
 src/net/tcp_connection.i: src/net/tcp_connection.cc.i
@@ -526,7 +574,7 @@ src/net/tcp_connection.i: src/net/tcp_connection.cc.i
 
 # target to preprocess a source file
 src/net/tcp_connection.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_connection.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/tcp_connection.cc.i
 .PHONY : src/net/tcp_connection.cc.i
 
 src/net/tcp_connection.s: src/net/tcp_connection.cc.s
@@ -534,7 +582,7 @@ src/net/tcp_connection.s: src/net/tcp_connection.cc.s
 
 # target to generate assembly for a file
 src/net/tcp_connection.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_connection.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/tcp_connection.cc.s
 .PHONY : src/net/tcp_connection.cc.s
 
 src/net/tcp_server.o: src/net/tcp_server.cc.o
@@ -542,7 +590,7 @@ src/net/tcp_server.o: src/net/tcp_server.cc.o
 
 # target to build an object file
 src/net/tcp_server.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_server.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/tcp_server.cc.o
 .PHONY : src/net/tcp_server.cc.o
 
 src/net/tcp_server.i: src/net/tcp_server.cc.i
@@ -550,7 +598,7 @@ src/net/tcp_server.i: src/net/tcp_server.cc.i
 
 # target to preprocess a source file
 src/net/tcp_server.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_server.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/tcp_server.cc.i
 .PHONY : src/net/tcp_server.cc.i
 
 src/net/tcp_server.s: src/net/tcp_server.cc.s
@@ -558,7 +606,7 @@ src/net/tcp_server.s: src/net/tcp_server.cc.s
 
 # target to generate assembly for a file
 src/net/tcp_server.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/tcp_server.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/tcp_server.cc.s
 .PHONY : src/net/tcp_server.cc.s
 
 src/net/timer_container.o: src/net/timer_container.cc.o
@@ -566,7 +614,7 @@ src/net/timer_container.o: src/net/timer_container.cc.o
 
 # target to build an object file
 src/net/timer_container.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/timer_container.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/timer_container.cc.o
 .PHONY : src/net/timer_container.cc.o
 
 src/net/timer_container.i: src/net/timer_container.cc.i
@@ -574,7 +622,7 @@ src/net/timer_container.i: src/net/timer_container.cc.i
 
 # target to preprocess a source file
 src/net/timer_container.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/timer_container.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/timer_container.cc.i
 .PHONY : src/net/timer_container.cc.i
 
 src/net/timer_container.s: src/net/timer_container.cc.s
@@ -582,32 +630,32 @@ src/net/timer_container.s: src/net/timer_container.cc.s
 
 # target to generate assembly for a file
 src/net/timer_container.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/net/timer_container.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/net/timer_container.cc.s
 .PHONY : src/net/timer_container.cc.s
 
-test/test_threadpool.o: test/test_threadpool.cc.o
-.PHONY : test/test_threadpool.o
+test/test_client.o: test/test_client.cc.o
+.PHONY : test/test_client.o
 
 # target to build an object file
-test/test_threadpool.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_threadpool.cc.o
-.PHONY : test/test_threadpool.cc.o
+test/test_client.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/test/test_client.cc.o
+.PHONY : test/test_client.cc.o
 
-test/test_threadpool.i: test/test_threadpool.cc.i
-.PHONY : test/test_threadpool.i
+test/test_client.i: test/test_client.cc.i
+.PHONY : test/test_client.i
 
 # target to preprocess a source file
-test/test_threadpool.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_threadpool.cc.i
-.PHONY : test/test_threadpool.cc.i
+test/test_client.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/test/test_client.cc.i
+.PHONY : test/test_client.cc.i
 
-test/test_threadpool.s: test/test_threadpool.cc.s
-.PHONY : test/test_threadpool.s
+test/test_client.s: test/test_client.cc.s
+.PHONY : test/test_client.s
 
 # target to generate assembly for a file
-test/test_threadpool.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test_threadpool.cc.s
-.PHONY : test/test_threadpool.cc.s
+test/test_client.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/test/test_client.cc.s
+.PHONY : test/test_client.cc.s
 
 # Help Target
 help:
@@ -617,7 +665,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test"
+	@echo "... client"
 	@echo "... src/base/async_logging.o"
 	@echo "... src/base/async_logging.i"
 	@echo "... src/base/async_logging.s"
@@ -651,6 +699,9 @@ help:
 	@echo "... src/net/channel.o"
 	@echo "... src/net/channel.i"
 	@echo "... src/net/channel.s"
+	@echo "... src/net/connector.o"
+	@echo "... src/net/connector.i"
+	@echo "... src/net/connector.s"
 	@echo "... src/net/epoller.o"
 	@echo "... src/net/epoller.i"
 	@echo "... src/net/epoller.s"
@@ -666,6 +717,9 @@ help:
 	@echo "... src/net/socket.o"
 	@echo "... src/net/socket.i"
 	@echo "... src/net/socket.s"
+	@echo "... src/net/tcp_client.o"
+	@echo "... src/net/tcp_client.i"
+	@echo "... src/net/tcp_client.s"
 	@echo "... src/net/tcp_connection.o"
 	@echo "... src/net/tcp_connection.i"
 	@echo "... src/net/tcp_connection.s"
@@ -675,9 +729,9 @@ help:
 	@echo "... src/net/timer_container.o"
 	@echo "... src/net/timer_container.i"
 	@echo "... src/net/timer_container.s"
-	@echo "... test/test_threadpool.o"
-	@echo "... test/test_threadpool.i"
-	@echo "... test/test_threadpool.s"
+	@echo "... test/test_client.o"
+	@echo "... test/test_client.i"
+	@echo "... test/test_client.s"
 .PHONY : help
 
 

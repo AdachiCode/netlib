@@ -1,0 +1,31 @@
+20230423 21:56:36.909278 208569 TRACE EventLoop created 0x7ffd484837f0 in thread 208569 - /home/spanoc/netlib/src/net/event_loop.cc : 17
+20230423 21:56:36.909832 208569 TRACE UpdateChannel fd = 5 - /home/spanoc/netlib/src/net/epoller.cc : 45
+20230423 21:56:36.909920 208569 TRACE Connector::StartInLoop() start connect - /home/spanoc/netlib/src/net/connector.cc : 28
+20230423 21:56:36.910163 208569 TRACE Connector::Connect() errno == 115 - /home/spanoc/netlib/src/net/connector.cc : 37
+20230423 21:56:36.910198 208569 TRACE UpdateChannel fd = 7 - /home/spanoc/netlib/src/net/epoller.cc : 45
+20230423 21:56:36.910241 208569 TRACE 1 events happened - /home/spanoc/netlib/src/net/epoller.cc : 28
+20230423 21:56:36.910257 208569 TRACE Connector::HandleWrite - /home/spanoc/netlib/src/net/connector.cc : 93
+20230423 21:56:36.910269 208569 TRACE RemoveChannel fd = 7 - /home/spanoc/netlib/src/net/epoller.cc : 62
+20230423 21:56:36.910304 208569 INFO  Connector::HandleWrite() connect successfully - /home/spanoc/netlib/src/net/connector.cc : 108
+20230423 21:56:36.910315 208569 INFO  TcpClient::NewConnection create a new connection - index : 0 - sockfd : 7 - /home/spanoc/netlib/src/net/tcp_client.cc : 34
+20230423 21:56:36.910371 208569 DEBUG TcpConnection constructed - index : 0 - sockfd : 7 - /home/spanoc/netlib/src/net/tcp_connection.cc : 16
+20230423 21:56:36.910455 208569 TRACE UpdateChannel fd = 7 - /home/spanoc/netlib/src/net/epoller.cc : 45
+20230423 21:56:36.910495 208569 TRACE TcpConnection::Send() copy message - /home/spanoc/netlib/src/net/tcp_connection.cc : 117
+20230423 21:56:36.910536 208569 TRACE TcpConnection::SendInLoop() sent 6 bytes
+ - /home/spanoc/netlib/src/net/tcp_connection.cc : 138
+20230423 21:56:36.910568 208569 TRACE 1 events happened - /home/spanoc/netlib/src/net/epoller.cc : 28
+20230423 21:56:36.910582 208569 TRACE TcpConnection::HandleRead() fd : 7 - /home/spanoc/netlib/src/net/tcp_connection.cc : 51
+20230423 21:56:36.910661 208569 TRACE TcpConnection::Send() copy message - /home/spanoc/netlib/src/net/tcp_connection.cc : 117
+20230423 21:56:36.910723 208569 TRACE TcpConnection::SendInLoop() sent 200 bytes
+ - /home/spanoc/netlib/src/net/tcp_connection.cc : 138
+20230423 21:56:36.910741 208569 TRACE TcpConnection::ShutDown() - /home/spanoc/netlib/src/net/tcp_connection.cc : 101
+20230423 21:56:36.910753 208569 TRACE Socket::ShutDownWrite() - /home/spanoc/netlib/src/net/socket.cc : 78
+20230423 21:56:36.911027 208569 TRACE 1 events happened - /home/spanoc/netlib/src/net/epoller.cc : 28
+20230423 21:56:36.911044 208569 TRACE TcpConnection::HandleRead() fd : 7 - /home/spanoc/netlib/src/net/tcp_connection.cc : 51
+20230423 21:56:36.911077 208569 TRACE TcpConnection::HandleClose() fd : 7 - /home/spanoc/netlib/src/net/tcp_connection.cc : 64
+20230423 21:56:36.911087 208569 TRACE UpdateChannel fd = 7 - /home/spanoc/netlib/src/net/epoller.cc : 45
+20230423 21:56:36.911098 208569 INFO  TcpClient::CloseConnection - index : 0 - sockfd : 7 - /home/spanoc/netlib/src/net/tcp_client.cc : 47
+20230423 21:56:36.911140 208569 DEBUG TcpConnection destroyed - index : 0 - sockfd : 7 - /home/spanoc/netlib/src/net/tcp_connection.cc : 27
+20230423 21:56:36.911178 208569 TRACE EventLoop 0x7ffd484837f0 stop looping - /home/spanoc/netlib/src/net/event_loop.cc : 42
+20230423 21:56:36.911188 208569 TRACE TcpClient::~TcpClient destructing - /home/spanoc/netlib/src/net/tcp_client.cc : 20
+20230423 21:56:36.911203 208569 TRACE RemoveChannel fd = 5 - /home/spanoc/netlib/src/net/epoller.cc : 62

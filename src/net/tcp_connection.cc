@@ -98,6 +98,7 @@ void TcpConnection::HandleWrite() {
 }
 
 void TcpConnection::ShutDown() {
+  LOG_TRACE << "TcpConnection::ShutDown()";
   loop_->RunInLoop(std::bind(&TcpConnection::ShutDownInLoop, shared_from_this()));
 }
 

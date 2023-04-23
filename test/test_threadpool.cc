@@ -18,8 +18,8 @@ void onConnection(const TcpConnectionPtr& conn)
       conn->Send(message1);
     if (!message2.empty())
       conn->Send(message2);
-    if (!message.empty())
-      conn->Send(message);
+    // if (!message.empty())
+    //   conn->Send(message);
     // conn->ShutDown();
   }
   else

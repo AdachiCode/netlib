@@ -21,6 +21,7 @@ void Acceptor::Listen() {
   assert(loop_->IsInLoopThread());
   listen_socket_.Listen();
   accept_channel_->EnableReading();
+  LOG_TRACE << "Acceptor::Listen() start";
 }
 
 void Acceptor::HandleAccept() {
