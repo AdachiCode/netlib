@@ -7,6 +7,7 @@
 
 Connector::Connector(EventLoop *loop, InetAddress server_addr) 
     : loop_(loop),
+      state_(kDisconnected),
       server_addr_(server_addr),
       connect_socket_(-1),
       reconnect_delay_(kInitReconnectDelay) {}
@@ -25,6 +26,7 @@ void Connector::Start() {
 
 void Connector::StartInLoop() {
   assert(loop_->IsInLoopThread());
+  assert(state_ == kDisconnected);
   LOG_TRACE << "Connector::StartInLoop() start connect";
   Connect();
 }
@@ -72,6 +74,7 @@ void Connector::Connect() {
 void Connector::Connecting() {
   assert(loop_->IsInLoopThread());
   assert(!connect_channel_);
+  state_ = kConnecting;
   connect_channel_.reset(new Channel(loop_, connect_socket_));
   connect_channel_->set_write_call_back(std::bind(&Connector::HandleWrite, this));
   connect_channel_->set_error_call_back(std::bind(&Connector::HandleError, this));
@@ -81,17 +84,24 @@ void Connector::Connecting() {
 void Connector::Reconnect() {
   assert(loop_->IsInLoopThread());
   ::close(connect_socket_);
+  state_ = kDisconnected;
   LOG_TRACE << "Connector::Reconnect() - Reconnect in " << reconnect_delay_ << " milliseconds";
   timer_ = loop_->RunAfter(reconnect_delay_ / 1000.0, std::bind(&Connector::StartInLoop, this));
   // reconnect_delay_ = std::min(reconnect_delay_ * 2, kMaxReconnectDelay); 用这句的话会链接错误 ???
-  reconnect_delay_ = kMaxReconnectDelay;
-  reconnect_delay_ = std::min(reconnect_delay_ * 2, reconnect_delay_);
+  reconnect_delay_ *= 2;
+  if (reconnect_delay_ > kMaxReconnectDelay) {
+    reconnect_delay_ = kMaxReconnectDelay;
+  }
 }
-
+// HandleError 和 HandleWrite 可能同时发生，这样就会reconnect两次，出现错误，所以需要state来表示当前状态
 void Connector::HandleWrite() {
   assert(loop_->IsInLoopThread());
   LOG_TRACE << "Connector::HandleWrite";
   assert(connect_socket_ == connect_channel_->fd());
+  if (state_ != kConnecting) {
+    assert(state_ == kDisconnected); // 说明刚处理过HandleError并调用reconnect
+    return;
+  }
   connect_channel_->Remove();
   // 延迟析构channel对象至HandleEvent结束
   loop_->QueueInLoop(std::bind(&Connector::ResetChannel, this));
@@ -99,12 +109,14 @@ void Connector::HandleWrite() {
   socklen_t length = sizeof(err);
   if (::getsockopt(connect_socket_, SOL_SOCKET, SO_ERROR, &err, &length) < 0) {
     LOG_ERROR << "Connector::HandleWrite getsockopt";
+    err = errno; // getsockeopt返回错误 也要重连
   }
   if (err) {
     char buf[64];
     LOG_WARN << "Connector::HandleWrite - SO_ERROR = " << err << " " << strerror_r(err, buf, sizeof(buf));
     Reconnect();
   } else {
+    state_ = kConnected;
     LOG_INFO << "Connector::HandleWrite() connect successfully";
     new_connection_call_back_(connect_socket_);
   }
@@ -114,12 +126,16 @@ void Connector::HandleError() {
   assert(loop_->IsInLoopThread());
   LOG_TRACE << "Connector::HandleError";
   assert(connect_socket_ == connect_channel_->fd());
+  if (state_ != kConnecting) {
+    return;
+  }
   connect_channel_->Remove();
   loop_->QueueInLoop(std::bind(&Connector::ResetChannel, this));
   int err = 0;
   socklen_t length = sizeof(err);
   if (::getsockopt(connect_socket_, SOL_SOCKET, SO_ERROR, &err, &length) < 0) {
     LOG_ERROR << "Connector::HandleError getsockopt";
+    err = errno;
   }
   char buf[64];
   LOG_WARN << "Connector::HandleError - SO_ERROR = " << err << " " << strerror_r(err, buf, sizeof(buf));

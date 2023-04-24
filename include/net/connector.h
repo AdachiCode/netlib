@@ -24,9 +24,11 @@ class Connector : private NonCopyable {
   void HandleWrite();
   void HandleError();
  private:
+  enum ConnectorState { kDisconnected, kConnecting, kConnected };
   void Reconnect();
   void ResetChannel();
   EventLoop *loop_;
+  ConnectorState state_;
   InetAddress server_addr_;
   int connect_socket_;  
   std::unique_ptr<Channel> connect_channel_;

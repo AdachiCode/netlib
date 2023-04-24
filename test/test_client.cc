@@ -14,6 +14,7 @@ void onConnection(const TcpConnectionPtr& conn)
   {
     printf("onConnection(): new connection [%d]\n",
            conn->index());
+    sleep(5);
     conn->Send(message);
   }
   else
