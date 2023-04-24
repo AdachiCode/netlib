@@ -1,3 +1,0 @@
-/home/spanoc/netlib/build/CMakeFiles/client.dir
-/home/spanoc/netlib/build/CMakeFiles/edit_cache.dir
-/home/spanoc/netlib/build/CMakeFiles/rebuild_cache.dir
