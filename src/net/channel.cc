@@ -28,7 +28,7 @@ void Channel::HandleEvent() {
   } 
   if ((revents_ & EPOLLHUP) && !(revents_ & EPOLLIN)) { // 除开read返回0的另一种对方关闭写操作的标识
     LOG_WARN << "Channel::HandleEvent EPOLLHUP";
-    if (close_call_back_) close_call_back_;
+    if (close_call_back_) close_call_back_();
   }
   if (revents_ & (EPOLLIN | EPOLLPRI | EPOLLRDHUP)) {
     if (read_call_back_) read_call_back_();
