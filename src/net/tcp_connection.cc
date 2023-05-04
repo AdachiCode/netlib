@@ -79,7 +79,7 @@ void TcpConnection::HandleWrite() {
     ssize_t written = 0;
     written = ::write(channel_->fd(), output_buffer_.peek(), output_buffer_.readable_bytes());
     if (written > 0) {
-      LOG_TRACE << "TcpConnection::HandleWrite() sent " << written << " bytes\n";
+      LOG_TRACE << "TcpConnection::HandleWrite() sent " << written << " bytes";
       output_buffer_.Retrieve(written);
       if (output_buffer_.readable_bytes() == 0) {
         channel_->DisableWriting();

@@ -1,15 +1,16 @@
 #ifndef NETLIB_NET_TCP_CONNECTION_H
 #define NETLIB_NET_TCP_CONNECTION_H
 
+#include <assert.h>
 #include <memory>
 #include <functional>
 #include "base/noncopyable.h"
 #include "net/socket.h"
 #include "net/buffer.h"
+#include "net/event_loop.h"
 
 class Buffer;
 class Channel;
-class EventLoop;
 class TcpConnection;
 
 typedef std::shared_ptr<TcpConnection> TcpConnectionPtr;
@@ -37,7 +38,7 @@ class TcpConnection : private NonCopyable, public std::enable_shared_from_this<T
   int index() const { return index_;}
   int fd() const { return socket_->fd(); }
   EventLoop *loop() { return loop_; }
-  bool connected() const { return state_ == kConnected; }
+  bool connected() const { assert(loop_->IsInLoopThread()); return state_ == kConnected; }
  private:
   enum TcpState { kConnected, kConnecting, kDisconnecting, kDisconnected };
   void HandleRead();
