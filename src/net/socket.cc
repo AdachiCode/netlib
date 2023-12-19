@@ -3,6 +3,7 @@
 #include "net/socket.h"
 #include <sys/socket.h>
 #include <fcntl.h>
+#include <netinet/tcp.h>
 
 const char *kDefaultIp = "172.29.52.153";
 
@@ -46,7 +47,7 @@ int Socket::Accpet(InetAddress *peeraddr) {
   int connfd = accept(sockfd_, peeraddr->addr(), &addrlen);
   if (connfd < 0) {
     int saved_errno = errno;
-    LOG_FATAL << "Socket::Accepy() errno : " << saved_errno;
+    LOG_FATAL << "Socket::Accept() errno : " << saved_errno;
     return connfd;
   }                    
   LOG_TRACE << "Socket::Accept a connection fd: " << connfd;
@@ -71,6 +72,13 @@ void Socket::SetKeepAlive() {
   int optval = 1;
   if (::setsockopt(sockfd_, SOL_SOCKET, SO_KEEPALIVE, &optval, static_cast<socklen_t>(sizeof(optval))) < 0) {
     LOG_ERROR << "Socket::SetKeepAlive() failed";
+  }
+}
+
+void Socket::SetTcpNoDelay() {
+  int optval = 1;
+  if (::setsockopt(sockfd_, IPPROTO_TCP, TCP_NODELAY, &optval, static_cast<socklen_t>(sizeof(optval))) < 0) {
+    LOG_ERROR << "Socket::SetTcpNoDelay() failed";
   }
 }
 

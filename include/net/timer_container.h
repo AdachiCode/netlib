@@ -3,7 +3,6 @@
 
 #include <functional>
 #include <vector>
-#include <deque>
 #include <queue>
 #include <memory>
 #include "base/noncopyable.h"
@@ -48,7 +47,7 @@ class TimerContainer : private NonCopyable {
   void HandleTimedEvent();
  private:
   typedef std::pair<Timestamp, std::shared_ptr<Timer>> TimerEntry; // 可以按照shared_ptr内置指针的大小排序
-  typedef std::priority_queue<TimerEntry, std::deque<TimerEntry>, std::greater<TimerEntry>> TimerQueue; 
+  typedef std::priority_queue<TimerEntry, std::vector<TimerEntry>, std::greater<TimerEntry>> TimerQueue; 
   
   EventLoop *loop_;
   TimerQueue timers_;

@@ -1,0 +1,4 @@
+#### 关闭服务器的方式
+- 只需要把主线程的loop给quit掉即可
+> 主线程loop退出后，main函数结束，会析构局部变量tcp
+\_server，TcpServer的析构函数会析构EventLoopThreadPool,接着递归析构EventLoopThread，析构EventLoopThread时会使每个工作线程的循环退出，并且回收该线程，保证子线程都结束后EventLoopThread对象才会析构完成，主线程才会结束.

@@ -14,11 +14,13 @@ TcpConnection::TcpConnection(EventLoop *loop, int sockfd, int index, InetAddress
       peer_addr_(peer_addr),
       index_(index) {
   LOG_DEBUG << "TcpConnection constructed - index : " << index_ << " - sockfd : " << socket_->fd();
+  // 构造函数内不能使用shared_from_this，因为该对象在构造之后才会交给shared_ptr管理
   channel_->set_read_call_back(std::bind(&TcpConnection::HandleRead, this));
   channel_->set_write_call_back(std::bind(&TcpConnection::HandleWrite, this));
   channel_->set_close_call_back(std::bind(&TcpConnection::HandleClose, this));
   channel_->set_error_call_back(std::bind(&TcpConnection::HandleError, this));
   socket_->SetKeepAlive();
+  socket_->SetTcpNoDelay();
   // 不可在此调用 channel_->EnableRead 因为创建TCPConnection的线程和事件循环线程可能不同
   // 如果事件循环线程的事件到达了， 而TCPconnection还没构造完成， 就会出错
 }

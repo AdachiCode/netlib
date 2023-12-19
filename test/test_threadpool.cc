@@ -3,6 +3,8 @@
 #include "net/socket.h"
 #include <stdio.h>
 
+EventLoop *g_loop = nullptr;
+
 std::string message;
 std::string message1;
 std::string message2;
@@ -24,9 +26,13 @@ void onConnection(const TcpConnectionPtr& conn)
   }
   else
   {
+    // abort();
     printf("onConnection(): tid=%d connection [%d] is down\n",
            CurrentThread::gettid(),
            conn->index());
+    g_loop->RunAfter(5, []() {
+      g_loop->Quit();
+    });
   }
 }
 
@@ -44,7 +50,6 @@ void onMessage(const TcpConnectionPtr& conn,
 int main(int argc, char* argv[])
 {
   printf("main(): pid = %d\n", getpid());
-
   int len1 = 100;
   int len2 = 200;
 
@@ -72,6 +77,7 @@ int main(int argc, char* argv[])
 
   InetAddress listenAddr(9981);
   EventLoop loop;
+  g_loop = &loop;
 
   TcpServer server(&loop, listenAddr);
   server.set_connection_call_back(onConnection);

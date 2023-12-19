@@ -42,12 +42,12 @@ class  AsyncLogging : private NonCopyable {
 // 创建AsyncLogging的唯一实例并仅调用一次Start函数
 class AsyncLoggingInit : private NonCopyable {
  public:
-  AsyncLoggingInit() {
-    instance_.Start();
-  }
   AsyncLogging *instance() { return &instance_; }
   static AsyncLogging *GetInstance();
  private:
+  AsyncLoggingInit() {
+    instance_.Start();
+  }
   AsyncLogging instance_;
 };
 
