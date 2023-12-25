@@ -4,7 +4,7 @@ project(netlib)
 set(CMAKE_CXX_COMPILER "clang++")
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wthread-safety -fsanitize=thread")
 # 想要生成coredump文件，就不能用 -fsanitize=thread
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wthread-safety")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wthread-safety -std=c++11 -pthread")
 # 检测内存泄漏
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wthread-safety -fsanitize=leak")
 # 调试选项

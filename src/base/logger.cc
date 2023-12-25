@@ -19,7 +19,7 @@ Logger::Logger(const char *filename, int line, LogLevel level)
       filename_(filename),
       line_(line) {
   stream_ << timestamp_.FormattedString() << ' ';
-  stream_ << static_cast<int>(gettid()) << ' ';
+  stream_ << static_cast<int>(CurrentThread::gettid()) << ' ';
   stream_ << log_level_name[level_];
 }
 
