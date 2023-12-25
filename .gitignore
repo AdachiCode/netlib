@@ -1,4 +1,4 @@
-./build/
-./logging/
-./bin/
-./lib/
+build/
+logging/
+bin/
+lib/
