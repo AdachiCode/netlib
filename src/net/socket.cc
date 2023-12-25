@@ -5,7 +5,8 @@
 #include <fcntl.h>
 #include <netinet/tcp.h>
 
-const char *kDefaultIp = "172.29.52.153";
+// const char *kDefaultIp = "172.29.52.153";
+const char *kDefaultIp = "0.0.0.0";
 
 IgnoreSigPipe ignore_sig_pipe;
 
